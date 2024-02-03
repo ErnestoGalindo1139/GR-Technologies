@@ -1,6 +1,9 @@
+import { HomePage } from "./GRTechnologies/pages/HomePage"
 
 export const GRTechnologiesApp = () => {
     return (
-        <div>GRTechnologiesApp</div>
+        <>
+            <HomePage />
+        </>
     )
 }
