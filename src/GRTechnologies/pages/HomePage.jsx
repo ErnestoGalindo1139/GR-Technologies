@@ -1,4 +1,5 @@
-import { Navbar } from "../components/Navbar"
+import { nosotrosInfo } from "../../data"
+import { Navbar, NosotrosGroup } from "../components"
 
 export const HomePage = () => {
     return (
@@ -7,6 +8,13 @@ export const HomePage = () => {
             <div className="h-[600px] color-secundario">
 
             </div>
+
+            {
+                nosotrosInfo.map( info => (
+                    <NosotrosGroup key={info.id} info={ info } />
+                ))
+            }
         </>
     )
 }
+
