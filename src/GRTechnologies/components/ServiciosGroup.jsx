@@ -1,9 +1,13 @@
 import { ServiciosInfo, ServiciosInfoMini } from "../../data"
 import { ServiciosCard, ServiciosMiniCard } from "../components"
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 export const ServiciosGroup = () => {
+
+    const serviciosRef = useScrollAnimation(0.05, 'animate__lightSpeedInRight');
+
     return (
-        <div className="color-primario pb-20">
+        <div ref={serviciosRef} id="nuestrosServicios" className="color-primario pb-20">
             <div className=" mx-auto max-w-[1500px] px-10 py-1">
                 <h2 className="text-white font-bold text-5xl text-center my-8">Contrata nuestros servicios fácilmente</h2>
                 <p className="text-2xl text-gray-500 " >Elegí los servicios que deseas contratar, completá un pequeño formulario para contarnos sobre tu marca y nos vamos a comunicar para empezar a <strong className="text-gray-200">trabajar juntos.</strong></p>

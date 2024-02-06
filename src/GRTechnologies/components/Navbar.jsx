@@ -2,6 +2,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
+    { name: 'Inicio', href: 'inicio'},
     { name: 'Nosotros', href: 'nosotros'},
     { name: 'Nuestros Servicios', href: 'nuestrosServicios'},
     { name: 'Ubicacion', href: 'ubicacion'},
@@ -10,6 +11,18 @@ const navigation = [
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
+}
+
+function scrollNav(e, targetId = 'inicio') {
+    e.preventDefault();
+
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+        targetElement.scrollIntoView({
+            behavior: 'smooth',
+        });
+    }
 }
 
 export const Navbar = () => {
@@ -32,7 +45,7 @@ export const Navbar = () => {
                         </Disclosure.Button>
                     </div>
                     <div className="flex flex-1 items-center justify-between">
-                        <a href="inicio">
+                        <a href="inicio"  onClick={(e) => scrollNav(e)}>
                             <div className="flex flex-shrink-0 items-center">
                                 <img
                                     className="h-[64px] w-auto"
@@ -45,6 +58,7 @@ export const Navbar = () => {
                             <div className="flex space-x-4">
                                 {navigation.map((item) => (
                                 <a
+                                    onClick={(e) => scrollNav(e, item.href)}
                                     key={item.name}
                                     href={item.href}
                                     className={classNames(
@@ -67,6 +81,7 @@ export const Navbar = () => {
                 <div className="space-y-1 px-2 pb-3 pt-2">
                 {navigation.map((item) => (
                     <Disclosure.Button
+                        onClick={(e) => scrollNav(e, item.href)}
                         key={item.name}
                         as="a"
                         href={item.href}

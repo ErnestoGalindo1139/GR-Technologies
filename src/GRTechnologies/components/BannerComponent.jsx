@@ -1,7 +1,11 @@
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 export const BannerComponent = () => {
+
+    const bannerRef = useScrollAnimation(0.05, 'animate__lightSpeedInRight');
+
     return (
-        <div className="h-[52rem] color-primario banner flex justify-center items-center gap-24">
+        <div ref={bannerRef} id="inicio" className="h-[52rem] color-primario banner flex justify-center items-center gap-24">
                 <div className="pt-20">
                     <h2 className="text-white text-[3rem] colorTextBanner">We're GRS Technologies</h2>
                     <p className="text-white text-[1.6rem]">Brindamos soluciones creativas, rapidas y eficaces</p>
