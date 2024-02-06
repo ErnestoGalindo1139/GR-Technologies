@@ -48,7 +48,7 @@ export const Navbar = () => {
                         <a href="inicio"  onClick={(e) => scrollNav(e)}>
                             <div className="flex flex-shrink-0 items-center">
                                 <img
-                                    className="h-[64px] w-auto"
+                                    className="h-[64px] w-auto ml-1"
                                     src="/GRS-LogoNavbar.png"
                                     alt="Your Company"
                                 />
