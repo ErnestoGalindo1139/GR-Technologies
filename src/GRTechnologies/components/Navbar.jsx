@@ -2,6 +2,8 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
+    { name: 'Nosotros', href: 'nosotros'},
+    { name: 'Nuestros Servicios', href: 'nuestrosServicios'},
     { name: 'Ubicacion', href: 'ubicacion'},
     { name: 'Contacto', href: 'contacto'},
 ]
@@ -34,7 +36,7 @@ export const Navbar = () => {
                             <div className="flex flex-shrink-0 items-center">
                                 <img
                                     className="h-[64px] w-auto"
-                                    src="./GR-LogoNavbar.png"
+                                    src="/GRS-LogoNavbar.png"
                                     alt="Your Company"
                                 />
                             </div>
