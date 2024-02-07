@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { IntegrantesCard } from "../components"
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 

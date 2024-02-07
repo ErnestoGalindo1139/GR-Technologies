@@ -1,0 +1,1 @@
+export const secciones = ['nosotros', 'mision', 'vision', 'integrantes'];
