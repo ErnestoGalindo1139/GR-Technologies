@@ -8,7 +8,7 @@ export const NosotrosGroup = ({ info }) => {
 
     return (
         
-        <div ref={nosotrosRef} id="nosotros" className="py-5 px-16 bg-[#1C1D26]">
+        <div ref={nosotrosRef} id="nosotros" className="py-5 px-16 color3">
                         
             <h2 className="text-[#428BFF] font-bold text-4xl text-center my-5">{ info.titulo }</h2>
             <hr className="w-[10%] my-5 border border-[#428BFF] border-solid h-[5px] bg-[#428BFF]"/>

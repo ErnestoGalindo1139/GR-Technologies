@@ -27,7 +27,7 @@ function scrollNav(e, targetId = 'inicio') {
 
 export const Navbar = () => {
     return (
-        <Disclosure as="nav" className="color-primario sticky top-0 z-[100] py-2">
+        <Disclosure as="nav" className="color1 sticky top-0 z-[100] py-2">
         {({ open }) => (
             <>
             <div className="max-w-full ">

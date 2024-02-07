@@ -1,20 +1,30 @@
 export const ServiciosInfo = [
     {
         id: 1,
-        titulo: 'Páginas Web',
-        descripcion: 'Creamos la página web ideal y profesional para tu negocio, personal o corporativa, no tenemos límites.',
-        imagen: 'https://ghdesarrollo.com/wp-content/uploads/2022/01/web.png',
+        titulo: 'Landing Page',
+        descripcion: ['Diseño web adaptable a cualquier dispositivo', '1 sección web', 'Vinculación con WhatsApp', 'Posicionamiento SEO', 'Links a las Redes Sociales de tu Negocio', 'Formulario de Contacto para clientes', 'Configuración de Hosting y Dominio', 'Soporte gratis por 30 días'],
+        colorHeading: '059669',
+        colorText: '#FFFFFF',
     },
     {
         id: 2,
-        titulo: 'Tiendas Online',
-        descripcion: 'Creamos tu tienda online profesional y autoagestionable con carrito de compras y diseño totalmente personalizado',
-        imagen: 'https://ghdesarrollo.com/wp-content/uploads/2022/01/tiendas.png'
+        titulo: 'Sitio Web',
+        descripcion: ['Diseño web adaptable a cualquier dispositivo', 'Hasta 8 secciones para tu sitio web', 'Optimizacion de SEO', 'Vinculación con WhatsApp', 'Links a las Redes Sociales de tu Negocio', 'Formulario de Contacto para clientes', 'Blog de Noticias', 'Apartado de administracion del sitio web', 'Configuración de Hosting y Dominio', 'Soporte gratis por 60 días'],
+        colorHeading: '3b82f6',
+        colorText: '#FFFFFF',
     },
     {
         id: 3,
-        titulo: 'Marketing Digital',
-        descripcion: 'Impulsamos tu marca hacia el éxito en línea con estrategias personalizadas y resultados comprobados en campañas digitales.',
-        imagen: 'https://ghdesarrollo.com/wp-content/uploads/2022/01/marketing-768x520.png'
+        titulo: 'Sitio Web Sin Limites',
+        descripcion: ['Sin ninguna limitacion ni restriccion', 'Secciones ilimitadas', 'Optimizacion de SEO', 'Diseño web adaptable a cualquier dispositivo', 'Vinculación con WhatsApp', 'Links a las Redes Sociales de tu Negocio', 'Formulario de Contacto para clientes', 'Blog de Noticias', 'Apartado de administracion del sitio web', 'Configuración de Hosting y Dominio', 'Hosting por 2 años', 'Soporte gratis por 60 días'],
+        colorHeading: 'facc15',
+        colorText: '#000000',
+    },
+    {
+        id: 4,
+        titulo: 'Tienda Virtual',
+        descripcion: ['Diseño web adaptable a cualquier dispositivo', 'Secciones ilimitadas', 'Optimizacion de SEO', 'Vinculación con WhatsApp', 'Links a las Redes Sociales de tu Negocio', 'Formulario de Contacto para clientes', 'Blog de Noticias', 'Apartado de administracion del sitio web', 'Configuración de Hosting y Dominio', 'Hosting por 2 años', 'Carrito de compras', 'Pago en linea', 'Login y registro de usuarios', 'Soporte gratis por 90 días'],
+        colorHeading: '7e22ce',
+        colorText: '#FFFFFF',
     },
 ]

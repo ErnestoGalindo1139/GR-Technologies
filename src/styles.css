@@ -18,12 +18,11 @@ body::-webkit-scrollbar-thumb {
 	background-color: #428BFF;
 }
 
-.color-primario {
-    background-color: #000016;
-}
-.color-secundario {
-    background-color: #1b1d33;
-}
+.color1 { background-color: #000016; }
+.color2 { background-color: #0d0e25; }
+.color3 { background-color: #1b1d33; }
+.color4 { background-color: #282b42; }
+.color5 { background-color: #353950; }
 
 .btn-whatsapp {
     position: relative;
