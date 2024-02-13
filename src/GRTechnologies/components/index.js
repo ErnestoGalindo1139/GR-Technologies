@@ -5,3 +5,6 @@ export * from './IconoWhatsAppAnimado';
 export * from './ServiciosCard';
 export * from './ServiciosMiniCard';
 export * from './SectionButton';
+export * from './TecnologiasGroup';
+export * from './TecnologiasCard';
+export * from './CarruselClientes';

@@ -27,7 +27,7 @@ export function FooterComponent() {
             <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
                 {
                     navigation.map((item) => (
-                        <li>
+                        <li key={item.name}>
                             <Typography 
                                 onClick={(e) => scrollNav(e, item.href)}
                                 key={item.name}

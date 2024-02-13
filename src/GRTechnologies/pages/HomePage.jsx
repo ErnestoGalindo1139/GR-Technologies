@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { nosotrosInfo, secciones } from "../../data"
-import { IconoWhatsAppAnimado, Navbar, NosotrosGroup, SectionButton } from "../components"
+import { nosotrosInfo, secciones, tecnologias } from "../../data"
+import { CarruselClientes, IconoWhatsAppAnimado, Navbar, NosotrosGroup, SectionButton, TecnologiasCard, TecnologiasGroup } from "../components"
 import { BannerComponent } from "../components/BannerComponent";
 import { Contacto } from "../components/Contacto";
 import { FooterComponent } from "../components/FooterComponent";
@@ -23,7 +23,7 @@ export const HomePage = () => {
             <BannerComponent />
 
             {/* Nosotros */}
-            <div>
+            <div className="color3">
                 {/* Botones de selección de sección */}
                 <SectionButton secciones={secciones} seleccionActual={seccionActual} cambiarSeccion={cambiarSeccion} />
 
@@ -33,6 +33,10 @@ export const HomePage = () => {
 
             {/* Nuestros Servicios */}
             <ServiciosGroup />
+
+            <TecnologiasGroup />
+
+            <CarruselClientes />
 
             {/* Contacto */}
             <Contacto />

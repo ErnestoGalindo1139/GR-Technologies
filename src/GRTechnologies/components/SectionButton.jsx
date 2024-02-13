@@ -1,6 +1,6 @@
 export const SectionButton = ({ secciones, seleccionActual, cambiarSeccion }) => {
     return (
-        <div className="color3 flex justify-around ">
+        <div className="flex justify-around mx-auto max-w-[1500px]">
             {
                 secciones.map((seccion) => (
                     <button
