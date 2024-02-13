@@ -11,6 +11,7 @@ import {
 } from "@material-tailwind/react";
 import { useFormPropio } from "../hooks/useFormPropio";
 import { useForm, ValidationError } from '@formspree/react';
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const servicios = [
     { id: 1, nombre: 'Landing Page' },
@@ -41,8 +42,10 @@ export const Contacto = () => {
 
     }, [state.submitting]);
 
+    const contactoRef = useScrollAnimation(0.05, 'animate__lightSpeedInRight');
+
     return (
-        <div className="bg-[#1b1d33] pb-[8rem]">
+        <div ref={contactoRef} id="contacto" className="bg-[#1b1d33] pb-[8rem]">
 
             <Typography 
                 variant="h1"
