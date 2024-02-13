@@ -154,3 +154,29 @@ body::-webkit-scrollbar-thumb {
         animation: rotate 4s linear infinite, opacityChange 3s infinite alternate;
     }
 }
+
+.typing-effect {
+    border-right: 3px solid #000;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.typing-text {
+    display: inline-block;
+    vertical-align: baseline;
+    background-clip: text;
+    color: transparent;
+    font-weight: 500;
+    background-image: linear-gradient(to right, #9000ff, #cc66ff, #ff66cc, #ff9999, #6699ff);
+    animation: typing-animation 0.75s step-end infinite;
+}
+
+@keyframes typing-animation {
+    from,
+    to {
+        border-right: 3px solid transparent;
+    }
+    50% {
+        border-right: 3px solid #fff; /* Color del borde al escribir */
+    }
+}
