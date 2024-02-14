@@ -5,6 +5,7 @@ import { BannerComponent } from "../components/BannerComponent";
 import { Contacto } from "../components/Contacto";
 import { FooterComponent } from "../components/FooterComponent";
 import { ServiciosGroup } from "../components/ServiciosGroup";
+import { Proyectos } from "../components/Proyectos";
 
 export const HomePage = () => {
 
@@ -34,9 +35,14 @@ export const HomePage = () => {
             {/* Nuestros Servicios */}
             <ServiciosGroup />
 
+            {/* Tecnologias */}
             <TecnologiasGroup />
 
+            {/* Clientes */}
             <CarruselClientes />
+
+            {/* Proyectos */}
+            <Proyectos />
 
             {/* Contacto */}
             <Contacto />
