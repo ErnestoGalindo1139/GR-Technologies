@@ -17,11 +17,7 @@ const proyectos = [
     {id: 3, locacion: './BHouse3.jpeg'},
     {id: 4, locacion: './BHouse4.jpeg'},
     {id: 5, locacion: './misso1.png'},
-    {id: 6, locacion: './misso2.png'},
-    {id: 7, locacion: './Walamito1.jpeg'},
-    {id: 8, locacion: './Walamito2.png'},
-    {id: 9, locacion: './Walamito3.png'},
-    {id: 10, locacion: './Walamito4.png'},
+    {id: 6, locacion: './Walamito1.png'},
 ]
 
 export const Proyectos = () => {
@@ -81,7 +77,7 @@ export const Proyectos = () => {
                                 className="swiper-slideProyectos"
                                 key={proyecto.id}
                             >
-                                <img src={proyecto.locacion} />
+                                <img className='rounded-[1rem]' src={proyecto.locacion} />
                             </SwiperSlide>
                         ))
                     }
