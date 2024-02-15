@@ -13,15 +13,15 @@ import { Typography } from '@material-tailwind/react';
 
 const proyectos = [
     {id: 1, locacion: './BHouse1.jpeg'},
-    {id: 2, locacion: './BHouse2.jpeg'},
+    {id: 2, locacion: './BHouse2.png'},
     {id: 3, locacion: './BHouse3.jpeg'},
     {id: 4, locacion: './BHouse4.jpeg'},
     {id: 5, locacion: './misso1.png'},
     {id: 6, locacion: './misso2.png'},
     {id: 7, locacion: './Walamito1.jpeg'},
-    {id: 8, locacion: './Walamito2.jpeg'},
-    {id: 9, locacion: './Walamito3.jpeg'},
-    {id: 10, locacion: './Walamito4.jpeg'},
+    {id: 8, locacion: './Walamito2.png'},
+    {id: 9, locacion: './Walamito3.png'},
+    {id: 10, locacion: './Walamito4.png'},
 ]
 
 export const Proyectos = () => {
@@ -30,7 +30,7 @@ export const Proyectos = () => {
     useEffect(() => {
         const handleResize = () => {
             // Ajustar slidesPerView según el ancho de la ventana
-            if (window.innerWidth >= 1200) {
+            if (window.innerWidth >= 1280) {
                 setSlidesPerView(3);
             } else if (window.innerWidth >= 768) {
                 setSlidesPerView(2);

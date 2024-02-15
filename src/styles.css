@@ -183,7 +183,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Carrusel de proyectos */
 .swiperProyectos {
-    width: 90rem;
+    width: 20rem;
 }
 
 .swiper-slideProyectos {
@@ -197,5 +197,53 @@ body::-webkit-scrollbar-thumb {
 .swiper-slideProyectos img {
     display: block;
     width: 100%;
-    height: 20rem;
+    height: 14rem;
+}
+
+@media (min-width: 768px) {
+    .swiperProyectos {
+        width: 40rem;
+    }
+
+    .swiper-slideProyectos img {
+        display: block;
+        width: 100%;
+        height: 16rem;
+    }
+}
+
+@media (min-width: 994px) {
+    .swiperProyectos {
+        width: 60rem;
+    }
+
+    .swiper-slideProyectos img {
+        display: block;
+        width: 100%;
+        height: 20rem;
+    }
+}
+
+@media (min-width: 1140px) {
+    .swiperProyectos {
+        width: 68rem;
+    }
+
+    .swiper-slideProyectos img {
+        display: block;
+        width: 100%;
+        height: 20rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .swiperProyectos {
+        width: 90rem;
+    }
+
+    .swiper-slideProyectos img {
+        display: block;
+        width: 100%;
+        height: 20rem;
+    }
 }
