@@ -12,12 +12,10 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { Typography } from '@material-tailwind/react';
 
 const proyectos = [
-    {id: 1, locacion: './BHouse1.jpeg'},
-    {id: 2, locacion: './BHouse2.png'},
-    {id: 3, locacion: './BHouse3.jpeg'},
-    {id: 4, locacion: './BHouse4.jpeg'},
-    {id: 5, locacion: './misso1.png'},
-    {id: 6, locacion: './Walamito1.png'},
+    {id: 1, locacion: './BHouse1.png'},
+    {id: 2, locacion: './misso1.png'},
+    {id: 3, locacion: './Walamito1.png'},
+    {id: 3, locacion: './DogsBrothersStore.png'},
 ]
 
 export const Proyectos = () => {
@@ -52,7 +50,7 @@ export const Proyectos = () => {
             <div className='bg-[#0d0e25]'>
 
                 <Typography variant='h2' className='text-center pt-[3rem] text-white text-[2.6rem]'>
-                    Lo que podemos lograr:
+                    Inspiración en Cada Detalle<span className='block text-blue-600'>Echa un Vistazo a Nuestros Proyectos más Recientes</span>
                 </Typography>
 
                 <Swiper
