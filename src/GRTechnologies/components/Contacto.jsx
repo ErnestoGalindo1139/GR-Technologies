@@ -86,18 +86,18 @@ export const Contacto = () => {
                     <div className="w-[16rem] h-[.2rem] bg-[#d946ef] mx-auto"></div>
                     <div className="flex justify-center mt-[1rem] gap-4">
                         <div className="bg-[#4b5563] rounded-full p-[.2rem]">
-                            <img src="https://img.icons8.com/material/24/instagram-new--v1.png" alt="new-post" className="w-[1.8rem] h-[1.8rem]"/>
+                            <img src="https://img.icons8.com/material/24/instagram-new--v1.png" alt="new-post" className="w-[1.8rem] h-[1.8rem] cursor-pointer"/>
                         </div>
 
-                        <div className="bg-[#4b5563] rounded-full p-[.4rem]">
+                        <div className="bg-[#4b5563] rounded-full p-[.4rem] cursor-pointer">
                             <img width="22" height="22" src="https://img.icons8.com/ios-filled/50/facebook-f.png" alt="facebook-f"/>
                         </div>
 
-                        <div className="bg-[#4b5563] rounded-full p-[.4rem]">
+                        <div className="bg-[#4b5563] rounded-full p-[.4rem] cursor-pointer">
                             <img width="22" height="22" src="https://img.icons8.com/ios-filled/50/linkedin-2--v1.png" alt="linkedin-2--v1" />
                         </div>
 
-                        <div className="bg-[#4b5563] rounded-full p-[.4rem]">
+                        <div className="bg-[#4b5563] rounded-full p-[.4rem] cursor-pointer">
                             <img width="22" height="22" src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="youtube-play"/>
                         </div>
                     </div>
