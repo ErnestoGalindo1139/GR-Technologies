@@ -43,7 +43,7 @@ export const CarruselClientes = () => {
 
     return (
         <div className='color5 py-16 mx-auto '>
-            <h3 className="text-white md:mb-4 text-center text-5xl md:pb-8">Nuestros Clientes</h3>
+            <h3 className="text-white md:mb-4 text-center text-4xl md:text-5xl md:pb-8">Nuestros Clientes</h3>
             <Swiper
                 // install Swiper modules
                 className='max-w-[1500px]'
