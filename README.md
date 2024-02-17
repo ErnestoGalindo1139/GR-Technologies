@@ -29,7 +29,7 @@ Nos ocupamos de la salud continua de tu sitio web. Ofrecemos servicios de manten
 
 Estamos aquí para responder a cualquier pregunta y discutir tus proyectos. ¡No dudes en ponerte en contacto con nosotros!
 
-- [mailto:grstech1139@gmail.com](mailto:mailto:grstech1139@gmail.com)
+- [grstech1139@gmail.com](mailto:grstech1139@gmail.com)
 - [Facebook](https://www.facebook.com/profile.php?id=61556454782524)
 - [Instagram](https://www.instagram.com/grs_technologies/)
 - [Sitio Web](https://grs-technologies.netlify.app/)
