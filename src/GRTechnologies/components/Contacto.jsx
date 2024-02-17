@@ -52,7 +52,7 @@ export const Contacto = () => {
             >
                 Solicitar
             </Typography>
-            <Alert color="green" className={`max-w-[50rem] ${envioForm == true ? '' : 'hidden'}`}>Formulario enviado correctamente.</Alert>
+            <Alert color="green" className={`max-w-[62rem] mx-auto mt-[4rem] ${envioForm == true ? '' : 'hidden'}`}>Formulario enviado correctamente.</Alert>
             
             <div ref={contactoRef} id="contacto" className="pb-[3rem] lg:pb-[8rem] flex flex-col lg:flex-row justify-center items-center lg:items-stretch lg:mt-[4rem]">
 
