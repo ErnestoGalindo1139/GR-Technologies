@@ -4,3 +4,4 @@ export * from './serviciosInfo';
 export * from './secciones';
 export * from './tecnologias';
 export * from './clientes';
+export * from './proyectos';

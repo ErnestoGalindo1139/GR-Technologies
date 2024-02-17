@@ -10,13 +10,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { Typography } from '@material-tailwind/react';
-
-const proyectos = [
-    {id: 1, locacion: './BHouse1.png'},
-    {id: 2, locacion: './misso1.png'},
-    {id: 3, locacion: './Walamito1.png'},
-    {id: 3, locacion: './DogsBrothersStore.png'},
-]
+import { proyectos } from '../../data';
 
 export const Proyectos = () => {
 

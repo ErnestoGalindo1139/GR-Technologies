@@ -48,7 +48,7 @@ export const Navbar = () => {
                             <div className="flex flex-shrink-0 items-center">
                                 <img
                                     className="h-[64px] w-auto ml-1"
-                                    src="/GRS-LogoNavbar.png"
+                                    src="https://res.cloudinary.com/dfszyib7k/image/upload/v1708140218/grs-pagina-web/GRS-LogoNavbar_y31f4h.png"
                                     alt="Your Company"
                                 />
                             </div>

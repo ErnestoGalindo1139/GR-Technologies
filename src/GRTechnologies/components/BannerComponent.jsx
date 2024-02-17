@@ -11,7 +11,7 @@ export const BannerComponent = () => {
                     <h2 className="text-center text-[1.7rem] sm:text-[3rem] colorTextBanner">We're <TypingEffect /></h2>
                     <p className=" text-center text-white text-[1rem] sm:text-[1.6rem] px-8">Brindamos soluciones creativas, rapidas y eficaces</p>
                 </div>
-                <img src="/banner.svg" className="w-1/3 xl:w-1/4" alt="banner" />
+                <img src="https://res.cloudinary.com/dfszyib7k/image/upload/v1708140218/grs-pagina-web/banner_huxfzr.svg" className="w-1/3 xl:w-1/4" alt="banner" />
                 {/* <a href="https://storyset.com/work">Work illustrations by Storyset</a> */}
             </div>
     )

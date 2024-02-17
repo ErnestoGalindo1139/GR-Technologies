@@ -23,7 +23,7 @@ export function FooterComponent() {
     return (
         <footer className="w-full bg-white p-8 color1">
         <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12text-center md:justify-between">
-            <img src="/GRS-LogoNavbar.png" alt="logo" className="w-[120px]" />
+            <img src="https://res.cloudinary.com/dfszyib7k/image/upload/v1708140218/grs-pagina-web/GRS-LogoNavbar_y31f4h.png" alt="logo" className="w-[120px]" />
             <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
                 {
                     navigation.map((item) => (

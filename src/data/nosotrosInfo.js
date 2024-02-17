@@ -5,7 +5,7 @@ export const nosotrosInfo = {
     integrantes: { id: 4, titulo: 'Nuestro Equipo', descripcion: 'Formado por expertos con muchos años de trayectoria en el sector, puede brindarle la mejor cobertura en una amplia gama de requerimientos, desde la realización de tareas de mantenimiento a la resolución de problemas e incidentes de manera más rápida y eficaz, con el valor agregado del establecimiento de protocolos que nos permitan evitar que esos mismos incidentes vuelvan a repetirse en el futuro.', integrantes: [
             { nombre: 'Ernesto David Galindo', puesto: 'Cofundador', linkedin: 'https://www.linkedin.com/in/ernesto-galindo-hernandez/', correo: 'mailto:edavid.galindo02@gmail.com', imagen: 'https://avatars.githubusercontent.com/u/99514599?v=4'},
             { nombre: 'Juan Carlos Rivas', puesto: 'Cofundador', linkedin: 'https://www.linkedin.com/in/juan-carlos-rivas-67172429b/', correo: 'mailto:juanrivasdev@gmail.com', imagen: 'https://lh3.googleusercontent.com/a/ACg8ocJwL1umOXWHlITp62M3VvMQ1xX8wS2y9rXVyJhRweV8MUPK=s288-c-no'},
-            { nombre: 'Abel Sánchez Urrea', puesto: 'Cofundador', linkedin: 'https://mx.linkedin.com/in/abel-sanchez-urrea-090b112ab', correo: 'mailto:abelsandev@gmail.com', imagen: './Abel.webp'},
+            { nombre: 'Abel Sánchez Urrea', puesto: 'Cofundador', linkedin: 'https://mx.linkedin.com/in/abel-sanchez-urrea-090b112ab', correo: 'mailto:abelsandev@gmail.com', imagen: 'https://res.cloudinary.com/dfszyib7k/image/upload/v1708140220/grs-pagina-web/Abel_nwdwjw.webp'},
         ]
     },
 };
