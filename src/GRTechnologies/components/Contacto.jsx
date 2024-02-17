@@ -54,28 +54,28 @@ export const Contacto = () => {
             </Typography>
             <Alert color="green" className={`max-w-[50rem] ${envioForm == true ? '' : 'hidden'}`}>Formulario enviado correctamente.</Alert>
             
-            <div ref={contactoRef} id="contacto" className="pb-[8rem] flex justify-center mt-[4rem]">
+            <div ref={contactoRef} id="contacto" className="pb-[8rem] flex flex-col lg:flex-row justify-center items-center lg:items-stretch mt-[4rem]">
 
             
-                <div className="bg-[#535f8f]s bg-[#000016] w-[22rem] rounded-s-xl">
+                <div className="bg-[#535f8f]s bg-[#000016] w-full lg:w-[22rem] lg:rounded-s-xl pb-[3rem] lg:pb-[0rem] lg:mx-0">
                     <Typography 
                         variant="h2"
                         className="text-center text-white text-[2rem] mt-[7rem]"
                     >
                         Contactanos
                     </Typography>
-                    <div className="w-[16rem] h-[.2rem] bg-[#d946ef] mx-auto mt-[2rem]"></div>
-                    <div className="flex flex-col gap-5 justify-center mt-[2rem] mb-[2rem] ml-[4rem]">
+                    <div className="w-3/4 lg:w-[16rem] h-[.2rem] bg-[#d946ef] mx-auto mt-[2rem]"></div>
+                    <div className="flex flex-col gap-5 -center mt-[2rem] mb-[2rem] ml-[4rem]">
 
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
                             <img width="34" height="34" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker" className="bg-[#4b5563] rounded-full p-[.2rem]"/>
                             <p className="text-white">Mazatlán, Sinaloa, México</p>
                         </div>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
                             <img width="34" height="34" src="https://img.icons8.com/ios-glyphs/30/iphone.png" alt="iphone" className="bg-[#4b5563] rounded-full p-[.2rem]"/>
                             <p className="text-white">+52 669 269 88 56</p>
                         </div>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
                             <img width="34" height="34" src="https://img.icons8.com/material-rounded/24/new-post.png" alt="new-post" className="bg-[#4b5563] rounded-full p-[.2rem]"/>
                             <p className="text-white">grstech1139@gmail.com</p>
                         </div>
@@ -83,32 +83,32 @@ export const Contacto = () => {
                         
 
                     </div>
-                    <div className="w-[16rem] h-[.2rem] bg-[#d946ef] mx-auto"></div>
-                    <div className="flex justify-center mt-[1rem] gap-4">
-                        <div className="bg-[#4b5563] rounded-full p-[.2rem]">
-                            <img src="https://img.icons8.com/material/24/instagram-new--v1.png" alt="new-post" className="w-[1.8rem] h-[1.8rem] cursor-pointer"/>
-                        </div>
+                    <div className="w-3/4 lg:w-[16rem] h-[.2rem] bg-[#d946ef] mx-auto"></div>
+                    <div className="flex justify-center mt-[1rem] gap-5">
+                        <a href="" className="cursor-pointer">
+                            <img width="32" height="32" src="https://img.icons8.com/ios/50/FE3073/instagram-new--v1.png" alt="instagram-new--v1"/>
+                        </a>
 
-                        <div className="bg-[#4b5563] rounded-full p-[.4rem] cursor-pointer">
-                            <img width="22" height="22" src="https://img.icons8.com/ios-filled/50/facebook-f.png" alt="facebook-f"/>
-                        </div>
+                        <a href="" className="cursor-pointer">
+                            <img width="32" height="32" src="https://img.icons8.com/ios-filled/50/3F51B5/facebook-f.png" alt="facebook-f"/>
+                        </a>
 
-                        <div className="bg-[#4b5563] rounded-full p-[.4rem] cursor-pointer">
-                            <img width="22" height="22" src="https://img.icons8.com/ios-filled/50/linkedin-2--v1.png" alt="linkedin-2--v1" />
-                        </div>
+                        <a href="" className="cursor-pointer">
+                            <img width="32" height="32" src="https://img.icons8.com/fluency/48/linkedin-2.png" alt="linkedin-2"/>
+                        </a>
 
-                        <div className="bg-[#4b5563] rounded-full p-[.4rem] cursor-pointer">
-                            <img width="22" height="22" src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="youtube-play"/>
-                        </div>
+                        <a href="" className="cursor-pointer">
+                            <img width="34" height="34" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/>
+                        </a>
                     </div>
                     
                 </div>
 
-                <div>
+                <div className="w-full lg:w-[40rem]">
             
                 {/* bg-[#536c8d] */}
                 {/* bg-[#243a69] */}
-                <Card className="w-[40rem] mr-auto ml-auto bg-[#000016]s p-[1rem] rounded-s-none bg-[#243a69]">
+                <Card className="mr-auto ml-auto bg-[#000016]s p-[1rem]  rounded-none lg:rounded-e-xl bg-[#243a69]">
                     <CardBody>
                         <Tabs value={type} className="overflow-visible">
                         
@@ -188,7 +188,7 @@ export const Contacto = () => {
                                             id="servicio"
                                             name="servicio"
                                             autoComplete="servicio-name"
-                                            className="block w-[22rem] border-b-2 border-[#93c5fd] shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
+                                            className="block w-full border-b-2 border-[#93c5fd] shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
                                             p-[.7rem] bg-inherit text-white"
                                             value={ !servicio ? '0' : servicio }
                                             onChange={onInputChange}
