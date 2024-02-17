@@ -19,10 +19,10 @@ export const CarruselClientes = () => {
     useEffect(() => {
         const handleResize = () => {
             // Ajustar slidesPerView según el ancho de la ventana
-            if (window.innerWidth >= 1200) {
-                setSlidesPerView(5);
-            } else if (window.innerWidth >= 768) {
+            if (window.innerWidth >= 1140) {
                 setSlidesPerView(3);
+            } else if (window.innerWidth >= 720) {
+                setSlidesPerView(2);
             } else {
                 setSlidesPerView(1);
             }
@@ -47,6 +47,7 @@ export const CarruselClientes = () => {
             <Swiper
                 // install Swiper modules
                 className='max-w-[1500px]'
+                grabCursor={true}
                 modules={[Pagination, A11y, Autoplay]}
                 spaceBetween={50}
                 slidesPerView={slidesPerView}
@@ -56,7 +57,7 @@ export const CarruselClientes = () => {
                 {
                     clientes.map( cliente => (
                         <SwiperSlide key={cliente.nombre} >
-                            <img className='w-80 h-24 md:h-16 my-32 md:my-16 md:w-52 mx-auto hover:opacity-50 transition-transform hover:scale-[1.2]' src={ cliente.url } alt={ cliente.nombre } />
+                            <img className='bg-deep-purple-900 p-2 lg:p-4 w-[50%] h-64 md:w-[65%] md:h-52 xl:w-[77%] xl:h-[18rem] rounded-[2.5rem] my-32 md:my-16 mx-auto hover:opacity-50 transition-transform hover:scale-[1.2]' src={ cliente.url } alt={ cliente.nombre } />
                         </SwiperSlide>
                     ))
                 }
