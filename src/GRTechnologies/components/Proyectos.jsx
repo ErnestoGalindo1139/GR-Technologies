@@ -10,13 +10,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { Typography } from '@material-tailwind/react';
-
-const proyectos = [
-    {id: 1, locacion: './BHouse1.png'},
-    {id: 2, locacion: './misso1.png'},
-    {id: 3, locacion: './Walamito1.png'},
-    {id: 4, locacion: './DogsBrothersStore.png'},
-]
+import { proyectos } from '../../data';
 
 export const Proyectos = () => {
 
@@ -49,8 +43,8 @@ export const Proyectos = () => {
         <>
             <div className='bg-[#0d0e25]'>
 
-                <Typography variant='h2' className='text-center pt-[3rem] text-white px-[1.5rem] text-[1.1rem] sm:text-[1.4rem] md:text-[2.1rem] lg:text-[2.6rem]'>
-                    Inspiración en Cada Detalle<span className='mt-1 md:mt-0 block text-blue-600'>Echa un Vistazo a Nuestros Proyectos más Recientes</span>
+                <Typography variant='h2' className='text-center pt-[3rem] text-white px-[1.5rem] text-2xl md:text-3xl lg:text-4xl'>
+                    Inspiración en Cada Detalle<span className='mt-1 -mb-12 md:-mb-8 md:mt-0 block text-blue-600 text-[1.3rem] md:text-[1.7rem] lg:text-[2.2rem]'>Echa un Vistazo a Nuestros Proyectos más Recientes</span>
                 </Typography>
 
                 <Swiper
@@ -67,7 +61,7 @@ export const Proyectos = () => {
                     }}
                     navigation={{ clickable: true }}
                     modules={[EffectCoverflow, Navigation]}
-                    className="swiperProyectos"
+                    className="swiperProyectos -mb-12 md:-mb-8"
                 >
                     {
                         proyectos.map( proyecto => (
