@@ -15,7 +15,7 @@ const proyectos = [
     {id: 1, locacion: './BHouse1.png'},
     {id: 2, locacion: './misso1.png'},
     {id: 3, locacion: './Walamito1.png'},
-    {id: 3, locacion: './DogsBrothersStore.png'},
+    {id: 4, locacion: './DogsBrothersStore.png'},
 ]
 
 export const Proyectos = () => {

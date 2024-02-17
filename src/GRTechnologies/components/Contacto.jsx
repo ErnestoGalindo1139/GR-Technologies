@@ -45,22 +45,22 @@ export const Contacto = () => {
     const contactoRef = useScrollAnimation(0.05, 'animate__lightSpeedInRight');
 
     return (
-        <div className="bg-[#1b1d33]">
+        <div className="bg-[#000016] lg:bg-[#1b1d33]">
             <Typography 
                 variant="h2"
-                className="text-center text-white text-[3rem] pt-10"
+                className="text-center text-blue-600 text-[3rem] pt-10"
             >
                 Solicitar
             </Typography>
             <Alert color="green" className={`max-w-[50rem] ${envioForm == true ? '' : 'hidden'}`}>Formulario enviado correctamente.</Alert>
             
-            <div ref={contactoRef} id="contacto" className="pb-[8rem] flex flex-col lg:flex-row justify-center items-center lg:items-stretch mt-[4rem]">
+            <div ref={contactoRef} id="contacto" className="pb-[8rem] flex flex-col lg:flex-row justify-center items-center lg:items-stretch lg:mt-[4rem]">
 
             
-                <div className="bg-[#535f8f]s bg-[#000016] w-full lg:w-[22rem] lg:rounded-s-xl pb-[3rem] lg:pb-[0rem] lg:mx-0">
+                <div className="bg-[#000016] w-full lg:w-[22rem] lg:rounded-s-xl pb-[3rem] lg:pb-[0rem] lg:mx-0">
                     <Typography 
                         variant="h2"
-                        className="text-center text-white text-[2rem] mt-[7rem]"
+                        className="text-center text-white text-[2rem] mt-[4rem] lg:mt-[7rem]"
                     >
                         Contactanos
                     </Typography>
@@ -85,11 +85,11 @@ export const Contacto = () => {
                     </div>
                     <div className="w-3/4 lg:w-[16rem] h-[.2rem] bg-[#d946ef] mx-auto"></div>
                     <div className="flex justify-center mt-[1rem] gap-5">
-                        <a href="" className="cursor-pointer">
+                        <a href="https://www.instagram.com/grs_technologies/" className="cursor-pointer">
                             <img width="32" height="32" src="https://img.icons8.com/ios/50/FE3073/instagram-new--v1.png" alt="instagram-new--v1"/>
                         </a>
 
-                        <a href="" className="cursor-pointer">
+                        <a href="https://www.facebook.com/profile.php?id=61556454782524" className="cursor-pointer">
                             <img width="32" height="32" src="https://img.icons8.com/ios-filled/50/3F51B5/facebook-f.png" alt="facebook-f"/>
                         </a>
 
@@ -97,7 +97,7 @@ export const Contacto = () => {
                             <img width="32" height="32" src="https://img.icons8.com/fluency/48/linkedin-2.png" alt="linkedin-2"/>
                         </a>
 
-                        <a href="" className="cursor-pointer">
+                        <a href="https://www.youtube.com/channel/UC_bUID-7eg1fN5ad5Q8CzCQ" className="cursor-pointer">
                             <img width="34" height="34" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/>
                         </a>
                     </div>
