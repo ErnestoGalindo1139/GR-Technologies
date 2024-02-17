@@ -47,4 +47,8 @@ export const tecnologias = [
         name: 'TypeScript',
         urlImage: 'https://img.icons8.com/ios-filled/256/2D79C7/typescript.png',
     },
+    {
+        name: 'Three JS',
+        urlImage: 'https://discourse.threejs.org/uploads/short-url/wFz74OtVJKHmXCI5F9qCe4VM1Gh.png?dl=1',
+    },
 ];
