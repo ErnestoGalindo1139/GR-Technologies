@@ -9,15 +9,15 @@ export const NosotrosGroup = ({ info }) => {
 
     return (
         
-        <div ref={nosotrosRef} id="nosotros" className="pt-5 pb-[5rem] px-16 mx-auto max-w-[1500px]">
+        <div ref={nosotrosRef} id="nosotros" className="pt-5 pb-[5rem] px-8 sm:px-16 mx-auto max-w-[1500px]">
                         
             <h2 className="text-[#428BFF] font-bold text-4xl text-center my-5">{ info.titulo }</h2>
             <hr className="w-[10%] my-5 border border-[#428BFF] border-solid h-[5px] bg-[#428BFF]"/>
 
-            <p className="text-white leading-8 text-xl text-center mb-4">{ info.descripcion }</p>
+            <p className="text-white leading-8 text-[1.1rem] sm:text-xl text-center mb-4">{ info.descripcion }</p>
             {
                 info.descripcion2
-                ? <p className="text-white leading-8 text-xl text-center ">{ info.descripcion2 }</p>
+                ? <p className="text-white leading-8 text-[1.1rem] sm:text-xl text-center ">{ info.descripcion2 }</p>
                 : <></>
             }
             {

@@ -114,7 +114,6 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 100%;
     border-radius: 24px;
-    padding: 10rem;
     margin: auto;
     display: grid;
     place-content: center;
@@ -122,7 +121,6 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.5em;
     --border-size: 0.3rem;
     border: var(--border-size) solid transparent;
-    /* Paint an image in the border */
     border-image: conic-gradient(
         from var(--angle),
         #d53e33 0deg 90deg,
@@ -133,7 +131,6 @@ body::-webkit-scrollbar-thumb {
     1 stretch;
 }
 
-  /* Animate when Houdini is available */
 @supports (background: paint(houdini)) {
     @property --opacity {
         syntax: "<number>";
@@ -177,7 +174,7 @@ body::-webkit-scrollbar-thumb {
         border-right: 3px solid transparent;
     }
     50% {
-        border-right: 3px solid #fff; /* Color del borde al escribir */
+        border-right: 3px solid #fff;
     }
 }
 

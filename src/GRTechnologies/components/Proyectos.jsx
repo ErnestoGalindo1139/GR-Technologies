@@ -69,7 +69,7 @@ export const Proyectos = () => {
                                 className="swiper-slideProyectos"
                                 key={proyecto.id}
                             >
-                                <img className='rounded-[1rem]' src={proyecto.locacion} />
+                                <img loading="lazy" className='rounded-[1rem]' src={ proyecto.locacion } alt={ proyecto.name } />
                             </SwiperSlide>
                         ))
                     }

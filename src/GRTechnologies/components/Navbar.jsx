@@ -2,10 +2,10 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-    { name: 'Inicio', href: 'inicio'},
-    { name: 'Nosotros', href: 'nosotros'},
-    { name: 'Nuestros Servicios', href: 'nuestrosServicios'},
-    { name: 'Contacto', href: 'contacto'},
+    { id:1, name: 'Inicio', href: 'inicio'},
+    { id:2, name: 'Nosotros', href: 'nosotros'},
+    { id:3, name: 'Nuestros Servicios', href: 'nuestrosServicios'},
+    { id:4, name: 'Contacto', href: 'contacto'},
 ]
 
 function classNames(...classes) {
@@ -49,7 +49,7 @@ export const Navbar = () => {
                                 <img
                                     className="h-[64px] w-auto ml-1"
                                     src="https://res.cloudinary.com/dfszyib7k/image/upload/v1708140218/grs-pagina-web/GRS-LogoNavbar_y31f4h.png"
-                                    alt="Your Company"
+                                    alt="Logo GRS Technologies"
                                 />
                             </div>
                         </a>
@@ -58,7 +58,7 @@ export const Navbar = () => {
                                 {navigation.map((item) => (
                                 <a
                                     onClick={(e) => scrollNav(e, item.href)}
-                                    key={item.name}
+                                    key={item.id}
                                     href={item.href}
                                     className={classNames(
                                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',

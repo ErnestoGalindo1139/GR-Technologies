@@ -17,8 +17,8 @@ export const ServiciosCard = ({ info }) => {
             <ul className="text-white px-8">
                 {
                     descripcion.map( (lista, index) => (
-                        <li key={index} className="border-b border-[#3f3f46] py-4 flex">
-                            <img src={`https://img.icons8.com/ios-filled/50/${colorHeading}/checkmark--v1.png`} alt="external-Services-web-analytics-and-development-apps-smashingstocks-detailed-outline-smashing-stocks" className="w-6 h-6 mr-3" />
+                        <li key={index} className="border-b border-[#3f3f46] py-4 flex text-sm sm:text-normal">
+                            <img loading="lazy" src={`https://img.icons8.com/ios-filled/50/${colorHeading}/checkmark--v1.png`} alt="external-Services-web-analytics-and-development-apps-smashingstocks-detailed-outline-smashing-stocks" className="w-6 h-6 mr-3" />
 
                             {lista}
                         </li>

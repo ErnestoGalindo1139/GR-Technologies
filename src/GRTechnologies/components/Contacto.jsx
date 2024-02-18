@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
     Card,
     CardBody,
@@ -12,13 +12,7 @@ import {
 import { useFormPropio } from "../hooks/useFormPropio";
 import { useForm, ValidationError } from '@formspree/react';
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
-
-const servicios = [
-    { id: 1, nombre: 'Landing Page' },
-    { id: 2, nombre: 'Sitio web' },
-    { id: 3, nombre: 'Sitio Web Sin Limites' },
-    { id: 4, nombre: 'Tienda Virtual' },
-]
+import { ServiciosInfo } from "../../data/serviciosInfo";
 
 export const Contacto = () => {
     const [type, setType] = useState("card");
@@ -68,37 +62,37 @@ export const Contacto = () => {
                     <div className="flex flex-col gap-5 -center mt-[2rem] mb-[2rem] ml-[4rem]">
 
                         <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
-                            <img width="34" height="34" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker" className="bg-[#4b5563] rounded-full p-[.2rem]"/>
+                            <img loading="lazy" width="34" height="34" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker" className="bg-[#4b5563] rounded-full p-[.2rem]"/>
                             <p className="text-white">Mazatlán, Sinaloa, México</p>
                         </div>
                         <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
-                            <img width="34" height="34" src="https://img.icons8.com/ios-glyphs/30/iphone.png" alt="iphone" className="bg-[#4b5563] rounded-full p-[.2rem]"/>
+                            <img loading="lazy" width="34" height="34" src="https://img.icons8.com/ios-glyphs/30/iphone.png" alt="iphone" className="bg-[#4b5563] rounded-full p-[.2rem]"/>
                             <p className="text-white">+52 669 269 88 56</p>
                         </div>
                         <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
-                            <img width="34" height="34" src="https://img.icons8.com/material-rounded/24/new-post.png" alt="new-post" className="bg-[#4b5563] rounded-full p-[.2rem]"/>
+                            <img loading="lazy" width="34" height="34" src="https://img.icons8.com/material-rounded/24/new-post.png" alt="new-post" className="bg-[#4b5563] rounded-full p-[.2rem]"/>
                             <p className="text-white">grstech1139@gmail.com</p>
                         </div>
                             
                         
 
                     </div>
-                    <div className="w-3/4 lg:w-[16rem] h-[.2rem] bg-[#d946ef] mx-auto"></div>
+                    <div className="mb-8 w-3/4 lg:w-[16rem] h-[.2rem] bg-[#d946ef] mx-auto"></div>
                     <div className="flex justify-center mt-[1rem] gap-5">
-                        <a href="https://www.instagram.com/grs_technologies/" className="cursor-pointer">
-                            <img width="32" height="32" src="https://img.icons8.com/ios/50/FE3073/instagram-new--v1.png" alt="instagram-new--v1"/>
+                        <a href="https://www.instagram.com/grs_technologies/" title="Visita nuestro perfil de Instagram" className="cursor-pointer">
+                            <img loading="lazy" width="32" height="32" src="https://img.icons8.com/ios/50/FE3073/instagram-new--v1.png" alt="instagram-new--v1"/>
                         </a>
 
-                        <a href="https://www.facebook.com/profile.php?id=61556454782524" className="cursor-pointer">
-                            <img width="32" height="32" src="https://img.icons8.com/ios-filled/50/3F51B5/facebook-f.png" alt="facebook-f"/>
+                        <a href="https://www.facebook.com/profile.php?id=61556454782524" title="Visita nuestro perfil de Facebook" className="cursor-pointer">
+                            <img loading="lazy" width="32" height="32" src="https://img.icons8.com/ios-filled/50/3F51B5/facebook-f.png" alt="facebook-f"/>
                         </a>
 
-                        <a href="" className="cursor-pointer">
-                            <img width="32" height="32" src="https://img.icons8.com/fluency/48/linkedin-2.png" alt="linkedin-2"/>
+                        <a href="#" title="Visita nuestro perfil de LinkedIn" className="cursor-pointer">
+                            <img loading="lazy" width="32" height="32" src="https://img.icons8.com/fluency/48/linkedin-2.png" alt="linkedin-2"/>
                         </a>
 
-                        <a href="https://www.youtube.com/channel/UC_bUID-7eg1fN5ad5Q8CzCQ" className="cursor-pointer">
-                            <img width="34" height="34" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/>
+                        <a href="https://www.youtube.com/channel/UC_bUID-7eg1fN5ad5Q8CzCQ" title="Visita nuestro canal de YouTube" className="cursor-pointer">
+                            <img loading="lazy" width="34" height="34" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/>
                         </a>
                     </div>
                     
@@ -129,17 +123,14 @@ export const Contacto = () => {
                                 <TabPanel value="card" className="p-0">
                                 <form className="mt-2 flex flex-col gap-4" onSubmit={handleSubmit}>
                                     <div>
-                                        <Typography
-                                            variant="small"
-                                            color="blue-gray"
-                                            className="mb-2 font-medium text-white text-xl"
-                                        >
+ 
+                                        <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="email">
                                             Email
-                                        </Typography>
+                                        </label>
                                         <input
                                             type="email"
                                             placeholder="Ej. name@gmail.com"
-                                            className="block w-full border-b-2 border-[#93c5fd] text-white shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
+                                            className="block w-full mt-1 mb-5 border-b-2 border-[#93c5fd] text-white shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
                                             p-[.5rem] bg-inherit"
                                             id="email"
                                             name="email"
@@ -153,17 +144,13 @@ export const Contacto = () => {
                                             errors={state.errors}
                                         />
 
-                                        <Typography
-                                            variant="small"
-                                            color="blue-gray"
-                                            className="mt-4 mb-2 font-medium text-white text-xl"
-                                        >
+                                        <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="celular">
                                             Celular
-                                        </Typography>
+                                        </label>
                                         <input
                                             type="number"
                                             placeholder="Ej. 6692847395"
-                                            className="block w-full border-b-2 border-[#93c5fd] text-white shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
+                                            className="block w-full mt-1 mb-5 border-b-2 border-[#93c5fd] text-white shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
                                             p-[.5rem] bg-inherit"
                                             id="celular"
                                             name="celular"
@@ -176,19 +163,15 @@ export const Contacto = () => {
                                             field="celular"
                                             errors={state.errors}
                                         />
-                                        
-                                        <Typography
-                                            variant="small"
-                                            color="blue-gray"
-                                            className="mt-4 mb-2 font-medium text-white text-xl"
-                                        >
+
+                                        <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="servicio">
                                             Seleccione un servicio
-                                        </Typography>
+                                        </label>
                                         <select
                                             id="servicio"
                                             name="servicio"
                                             autoComplete="servicio-name"
-                                            className="block w-full border-b-2 border-[#93c5fd] shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
+                                            className="block w-full mt-1 mb-5 border-b-2 border-[#93c5fd] shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
                                             p-[.7rem] bg-inherit text-white"
                                             value={ !servicio ? '0' : servicio }
                                             onChange={onInputChange}
@@ -196,9 +179,9 @@ export const Contacto = () => {
                                         >
                                             <option value="0" disabled className="text-black"> Seleccione un servicio </option>
                                             {
-                                                servicios.map( servicio => (
+                                                ServiciosInfo.map( servicio => (
                                                     <option key={servicio.id} value={servicio.id}  className="text-black">
-                                                        {servicio.nombre}
+                                                        {servicio.titulo}
                                                     </option>
                                                 ))
                                             }
@@ -208,21 +191,16 @@ export const Contacto = () => {
                                             field="servicio"
                                             errors={state.errors}
                                         />
-
-                                        <Typography
-                                            variant="small"
-                                            color="blue-gray"
-                                            className="mt-4 mb-2 font-medium text-white text-xl"
-                                        >
+                                        <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="comentarios">
                                             Comentarios
-                                        </Typography>
+                                        </label>
                                         <textarea 
                                             name="comentarios" 
                                             id="comentarios" 
                                             value={ comentarios }
                                             onChange={ onInputChange }
                                             rows="4" 
-                                            className="block w-full border-[#93c5fd] border border-2 rounded-md px-3.5 py-2 text-white shadow-sm ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-inherit"
+                                            className="block w-full mt-1 mb-5 border-[#93c5fd] border-2 rounded-md px-3.5 py-2 text-white shadow-sm ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-inherit"
                                             required>
                                         </textarea>
                                         <ValidationError 
@@ -234,7 +212,7 @@ export const Contacto = () => {
                                     </div>
                                     <Button 
                                         size="lg"
-                                        className="bg-[#a70267] mt-6 text-xl"
+                                        className="bg-[#a70267] hover:bg-[#a70283] mt-6 text-xl"
                                         type="submit"
                                         disabled={state.submitting}
                                     >

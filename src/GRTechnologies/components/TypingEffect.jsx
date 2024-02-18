@@ -27,7 +27,7 @@ export class TypingEffect extends Component {
                 clearInterval(typingInterval);
 
                 // Espera un tiempo antes de iniciar la eliminación del texto
-                setTimeout(() => this.eraseText(), 500);
+                setTimeout(() => this.eraseText(), 1500);
             }
         }, 100); // Ajusta el intervalo según tus preferencias
     };
@@ -51,7 +51,7 @@ export class TypingEffect extends Component {
                 }),
                 () => {
                     // Espera un tiempo antes de iniciar la escritura de la siguiente frase
-                    setTimeout(() => this.typeText(), 500);
+                    setTimeout(() => this.typeText(), 100);
                 }
                 );
             }

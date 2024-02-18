@@ -56,8 +56,8 @@ export const CarruselClientes = () => {
             >
                 {
                     clientes.map( cliente => (
-                        <SwiperSlide key={cliente.nombre} >
-                            <img className='bg-deep-purple-900 p-2 lg:p-4 w-[50%] h-64 md:w-[65%] md:h-52 xl:w-[77%] xl:h-[18rem] rounded-[2.5rem] my-32 md:my-16 mx-auto hover:opacity-50 transition-transform hover:scale-[1.2]' src={ cliente.url } alt={ cliente.nombre } />
+                        <SwiperSlide key={ cliente.id }>
+                            <img loading="lazy" className=' bg-deep-purple-900 p-2 lg:p-4 w-[70%] h-64 md:w-[65%] md:h-56 xl:w-[77%] xl:h-[18rem] rounded-[2.5rem] my-16 md:my-16 mx-auto hover:opacity-50 transition-transform hover:scale-[1.2]' src={ cliente.url } alt={ cliente.nombre } />
                         </SwiperSlide>
                     ))
                 }
