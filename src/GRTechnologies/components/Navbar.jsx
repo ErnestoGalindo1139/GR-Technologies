@@ -12,13 +12,19 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-function scrollNav(e, targetId = 'inicio') {
+function scrollNav(e, targetId = 'inicio', esMovil = false) {
     e.preventDefault();
 
     const targetElement = document.getElementById(targetId);
 
-    if (targetElement) {
-        targetElement.scrollIntoView({
+    if (targetElement && esMovil) {
+        window.scrollTo({
+            top: targetElement.offsetTop - 320,
+            behavior: 'smooth',
+        });
+    } else {
+        window.scrollTo({
+            top: targetElement.offsetTop - 220,
             behavior: 'smooth',
         });
     }
@@ -27,7 +33,7 @@ function scrollNav(e, targetId = 'inicio') {
 export const Navbar = () => {
     return (
         <Disclosure as="nav" className="color1 sticky top-0 z-[100] py-2">
-        {({ open }) => (
+        {({ open, close }) => (
             <>
             <div className="max-w-full ">
                 <div className="relative flex h-16 items-center justify-between">
@@ -80,7 +86,11 @@ export const Navbar = () => {
                 <div className="space-y-1 px-2 pb-3 pt-2">
                 {navigation.map((item) => (
                     <Disclosure.Button
-                        onClick={(e) => scrollNav(e, item.href)}
+                        onClick={(e) => {
+                            scrollNav(e, item.href, true);
+                            open ? close() : ''
+                        }}
+                        
                         key={item.name}
                         as="a"
                         href={item.href}
