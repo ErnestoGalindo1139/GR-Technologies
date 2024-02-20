@@ -3,8 +3,10 @@ import { Typography } from "@material-tailwind/react";
 const navigation = [
     { id:1, name: 'Inicio', href: 'inicio'},
     { id:2, name: 'Nosotros', href: 'nosotros'},
-    { id:3, name: 'Contacto', href: 'contacto'},
-    { id:4, name: 'Nuestros Servicios', href: 'nuestrosServicios'},
+    { id:3, name: 'Servicios', href: 'servicios'},
+    { id:4, name: 'Tecnologías', href: 'tecnologias'},
+    { id:5, name: 'Clientes', href: 'clientes'},
+    { id:6, name: 'Contacto', href: 'contacto'},
 ]
 
 function scrollNav(e, targetId = 'inicio') {

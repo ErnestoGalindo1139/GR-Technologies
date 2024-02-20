@@ -7,7 +7,7 @@ export const ServiciosGroup = () => {
     const serviciosRef = useScrollAnimation(0.05, 'animate__lightSpeedInRight');
 
     return (
-        <div ref={serviciosRef} id="nuestrosServicios" className="color5 pb-20">
+        <div ref={serviciosRef} id="servicios" className="color5 pb-20">
             <div className=" mx-auto max-w-[1500px] px-0 sm:px-10 py-1">
                 <h2 className="px-4 text-white font-bold text-3xl sm:text-5xl text-center my-8">Contrata nuestros servicios fácilmente</h2>
                 <p className="px-4 text-xl sm:text-2xl text-center text-gray-500 " >Elige los servicios que deseas contratar, completá un pequeño formulario para contarnos sobre tu marca y nos vamos a comunicar para empezar a <strong className="text-gray-200">trabajar juntos.</strong></p>

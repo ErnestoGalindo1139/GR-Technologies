@@ -42,7 +42,7 @@ export const CarruselClientes = () => {
 
 
     return (
-        <div className='color5 py-16 mx-auto '>
+        <div className='color5 py-16 mx-auto' id="clientes">
             <h3 className="text-white md:mb-4 text-center text-4xl md:text-5xl md:pb-8">Nuestros Clientes</h3>
             <Swiper
                 // install Swiper modules

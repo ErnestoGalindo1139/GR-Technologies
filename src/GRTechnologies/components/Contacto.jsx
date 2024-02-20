@@ -39,7 +39,7 @@ export const Contacto = () => {
     const contactoRef = useScrollAnimation(0.05, 'animate__lightSpeedInRight');
 
     return (
-        <div className="bg-[#000016] lg:bg-[#1b1d33]">
+        <div className="bg-[#000016] lg:bg-[#1b1d33]" id="contacto">
             <Typography 
                 variant="h2"
                 className="text-center text-blue-600 text-[3rem] pt-10"
@@ -48,7 +48,7 @@ export const Contacto = () => {
             </Typography>
             <Alert color="green" className={`max-w-[62rem] mx-auto mt-[4rem] ${envioForm == true ? '' : 'hidden'}`}>Formulario enviado correctamente.</Alert>
             
-            <div ref={contactoRef} id="contacto" className="pb-[3rem] lg:pb-[8rem] flex flex-col lg:flex-row justify-center items-center lg:items-stretch lg:mt-[4rem]">
+            <div ref={contactoRef} className="pb-[3rem] lg:pb-[8rem] flex flex-col lg:flex-row justify-center items-center lg:items-stretch lg:mt-[4rem]">
 
             
                 <div className="bg-[#000016] w-full lg:w-[22rem] lg:rounded-s-xl pb-[3rem] lg:pb-[0rem] lg:mx-0">
