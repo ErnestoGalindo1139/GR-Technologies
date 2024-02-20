@@ -5,7 +5,7 @@ export class TypingEffect extends Component {
         super(props);
         this.state = {
             text: '',
-            phrases: ['GRS Technologies', 'Creativity', 'Innovation', 'Exito', 'Solutions'],
+            phrases: ['GRS Technologies', 'Creativity', 'Innovation', 'Excellence', 'Solutions'],
             currentPhraseIndex: 0,
         };
     }
