@@ -23,7 +23,7 @@ export const ServiciosInfo = [
     {
         id: 4,
         titulo: 'Tienda Virtual',
-        descripcion: ['Diseño web adaptable a cualquier dispositivo', 'Secciones ilimitadas', 'Optimizacion de SEO', 'Vinculación con WhatsApp', 'Links a las Redes Sociales de tu Negocio', 'Formulario de Contacto para clientes', 'Blog de Noticias', 'Apartado de administracion del sitio web', 'Configuración de Hosting y Dominio', 'Hosting por 2 años', 'Carrito de compras', 'Pago en linea', 'Login y registro de usuarios', 'Soporte gratis por 5 días'],
+        descripcion: ['Diseño web adaptable a cualquier dispositivo', 'Secciones ilimitadas', 'Optimizacion de SEO', 'Vinculación con WhatsApp', 'Links a las Redes Sociales de tu Negocio', 'Formulario de Contacto para clientes', 'Blog de Noticias', 'Apartado de administracion del sitio web', 'Configuración de Hosting y Dominio', 'Hosting por 2 años', 'Carrito de compras', 'Pago en linea', 'Login y registro de usuarios', 'Soporte gratis por 6 meses'],
         colorHeading: '7e22ce',
         colorText: '#FFFFFF',
     },
