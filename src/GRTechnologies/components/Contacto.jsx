@@ -62,15 +62,15 @@ export const Contacto = () => {
                     <div className="flex flex-col gap-5 -center mt-[2rem] mb-[2rem] ml-[4rem]">
 
                         <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
-                            <img loading="lazy" width="34" height="34" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker" className="bg-[#4b5563] rounded-full p-[.2rem]"/>
+                            <img loading="lazy" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker" className="bg-[#4b5563] rounded-full p-[.2rem] w-[34px] h-[34px]"/>
                             <p className="text-white">Mazatlán, Sinaloa, México</p>
                         </div>
                         <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
-                            <img loading="lazy" width="34" height="34" src="https://img.icons8.com/ios-glyphs/30/iphone.png" alt="iphone" className="bg-[#4b5563] rounded-full p-[.2rem]"/>
+                            <img loading="lazy" src="https://img.icons8.com/ios-glyphs/30/iphone.png" alt="iphone" className="bg-[#4b5563] rounded-full p-[.2rem] w-[34px] h-[34px]"/>
                             <p className="text-white">+52 669 269 88 56</p>
                         </div>
                         <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
-                            <img loading="lazy" width="34" height="34" src="https://img.icons8.com/material-rounded/24/new-post.png" alt="new-post" className="bg-[#4b5563] rounded-full p-[.2rem]"/>
+                            <img loading="lazy" src="https://img.icons8.com/material-rounded/24/new-post.png" alt="new-post" className="bg-[#4b5563] rounded-full p-[.2rem] w-[34px] h-[34px]"/>
                             <p className="text-white">grstech1139@gmail.com</p>
                         </div>
                             
@@ -80,19 +80,19 @@ export const Contacto = () => {
                     <div className="mb-8 w-3/4 lg:w-[16rem] h-[.2rem] bg-[#d946ef] mx-auto"></div>
                     <div className="flex justify-center mt-[1rem] gap-5">
                         <a href="https://www.instagram.com/grs_technologies/" title="Visita nuestro perfil de Instagram" className="cursor-pointer">
-                            <img loading="lazy" width="32" height="32" src="https://img.icons8.com/ios/50/FE3073/instagram-new--v1.png" alt="instagram-new--v1"/>
+                            <img className="w-[32px] h-[32px]" loading="lazy" src="https://img.icons8.com/ios/50/FE3073/instagram-new--v1.png" alt="instagram-new--v1"/>
                         </a>
 
                         <a href="https://www.facebook.com/profile.php?id=61556454782524" title="Visita nuestro perfil de Facebook" className="cursor-pointer">
-                            <img loading="lazy" width="32" height="32" src="https://img.icons8.com/ios-filled/50/3F51B5/facebook-f.png" alt="facebook-f"/>
+                            <img className="w-[32px] h-[32px]" loading="lazy" src="https://img.icons8.com/ios-filled/50/3F51B5/facebook-f.png" alt="facebook-f"/>
                         </a>
 
                         <a href="#" title="Visita nuestro perfil de LinkedIn" className="cursor-pointer">
-                            <img loading="lazy" width="32" height="32" src="https://img.icons8.com/fluency/48/linkedin-2.png" alt="linkedin-2"/>
+                            <img className="w-[32px] h-[32px]" loading="lazy" src="https://img.icons8.com/fluency/48/linkedin-2.png" alt="linkedin-2"/>
                         </a>
 
                         <a href="https://www.youtube.com/channel/UC_bUID-7eg1fN5ad5Q8CzCQ" title="Visita nuestro canal de YouTube" className="cursor-pointer">
-                            <img loading="lazy" width="34" height="34" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/>
+                            <img className="w-[34px] h-[34px]" loading="lazy" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/>
                         </a>
                     </div>
                     
