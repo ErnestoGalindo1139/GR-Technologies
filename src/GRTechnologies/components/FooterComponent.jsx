@@ -9,13 +9,19 @@ const navigation = [
     { id:6, name: 'Contacto', href: 'contacto'},
 ]
 
-function scrollNav(e, targetId = 'inicio') {
+function scrollNav(e, targetId = 'inicio', esMovil = false) {
     e.preventDefault();
 
     const targetElement = document.getElementById(targetId);
 
-    if (targetElement) {
-        targetElement.scrollIntoView({
+    if (targetElement && esMovil) {
+        window.scrollTo({
+            top: targetElement.offsetTop - 460,
+            behavior: 'smooth',
+        });
+    } else {
+        window.scrollTo({
+            top: targetElement.offsetTop - 80,
             behavior: 'smooth',
         });
     }
@@ -31,7 +37,7 @@ export function FooterComponent() {
                     navigation.map((item) => (
                         <li key={ item.id }>
                             <Typography 
-                                onClick={(e) => scrollNav(e, item.href)}
+                                onClick={(e) => scrollNav(e, item.href, true)}
                                 key={item.name}
                                 as="a"
                                 href={item.href}
