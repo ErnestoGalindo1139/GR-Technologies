@@ -146,63 +146,6 @@ body::-webkit-scrollbar-thumb {
     color: #9000ff;
 }
 
-.box {
-    position: relative;
-    overflow: hidden;
-}
-
-:root {
-    --angle: 45deg;
-    --opacity: 0.5;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-.rainbow {
-    width: 100%;
-    height: 100%;
-    border-radius: 24px;
-    margin: auto;
-    display: grid;
-    place-content: center;
-    text-align: center;
-    font-size: 1.5em;
-    --border-size: 0.3rem;
-    border: var(--border-size) solid transparent;
-    border-image: conic-gradient(
-        from var(--angle),
-        #d53e33 0deg 90deg,
-        #fbb300 90deg 180deg,
-        #377af5 180deg 270deg,
-        #399953 270deg 360deg
-    )
-    1 stretch;
-}
-
-@supports (background: paint(houdini)) {
-    @property --opacity {
-        syntax: "<number>";
-        initial-value: 0.5;
-        inherits: false;
-    }
-    @property --angle {
-        syntax: "<angle>";
-        initial-value: 0deg;
-        inherits: false;
-    }
-    @keyframes rotate {
-        to {
-            --angle: 360deg;
-        }
-    }
-    .rainbow {
-        animation: rotate 4s linear infinite, opacityChange 3s infinite alternate;
-    }
-}
-
 .typing-effect {
     border-right: 3px solid #000;
     white-space: nowrap;

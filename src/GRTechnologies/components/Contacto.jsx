@@ -218,6 +218,7 @@ export const Contacto = () => {
                                     >
                                         Solicitar Cotizacion
                                     </Button>
+
                                 </form>
                                 </TabPanel>
                             </TabsBody>
