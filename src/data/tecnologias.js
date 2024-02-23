@@ -62,6 +62,6 @@ export const tecnologias = [
     {
         id: 13,
         name: 'Three JS',
-        urlImage: 'https://discourse.threejs.org/uploads/short-url/wFz74OtVJKHmXCI5F9qCe4VM1Gh.png?dl=1',
+        urlImage: 'https://res.cloudinary.com/dfszyib7k/image/upload/v1708480537/grs-pagina-web/Threejs-logo_e1nfij.png',
     },
 ];

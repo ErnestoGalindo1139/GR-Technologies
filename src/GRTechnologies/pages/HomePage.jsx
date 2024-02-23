@@ -23,15 +23,6 @@ export const HomePage = () => {
             {/* Banner */}
             <BannerComponent />
 
-            {/* Nosotros */}
-            <div className="color3">
-                {/* Botones de selección de sección */}
-                <SectionButton secciones={secciones} seleccionActual={seccionActual} cambiarSeccion={cambiarSeccion} />
-
-                {/* Contenido de la sección actual */}
-                <NosotrosGroup info={nosotrosInfo[seccionActual]} />
-            </div>
-
             {/* Nuestros Servicios */}
             <ServiciosGroup />
 
@@ -43,6 +34,15 @@ export const HomePage = () => {
 
             {/* Proyectos */}
             <Proyectos />
+
+            {/* Nosotros */}
+            <div className="color3">
+                {/* Botones de selección de sección */}
+                <SectionButton secciones={secciones} seleccionActual={seccionActual} cambiarSeccion={cambiarSeccion} />
+
+                {/* Contenido de la sección actual */}
+                <NosotrosGroup info={nosotrosInfo[seccionActual]} />
+            </div>
 
             {/* Contacto */}
             <Contacto />

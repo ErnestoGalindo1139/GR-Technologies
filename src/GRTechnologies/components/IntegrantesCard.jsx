@@ -17,10 +17,10 @@ export const IntegrantesCard = ({ integrantes }) => {
                             </div>  
                             <div className="text-gray-600 text-xs">
                                 <a href={integrante.linkedin} target="_blank" rel="noreferrer" title="Visita mi perfil de LinkedIn" >
-                                    <img loading="lazy" width="30" height="30" src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="linkedin"/>
+                                    <img className="w-[30px] h-[30px]" loading="lazy" src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="linkedin"/>
                                 </a>
                                 <a href={integrante.correo} target="_blank" rel="noreferrer" title="Enviar un correo electrónico" >
-                                    <img loading="lazy" width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/new-post.png" alt="new-post"/>
+                                    <img className="w-[30px] h-[30px]" loading="lazy" src="https://img.icons8.com/ios-glyphs/30/new-post.png" alt="new-post"/>
                                 </a>
                             </div>
                         </div>
