@@ -24,6 +24,13 @@ export const Contacto = () => {
         comentarios: '',
     });
 
+    const onCelularChange = (e) => {
+        const charCode = e.which ? e.which : e.keyCode;
+        if (charCode < 48 || charCode > 57) {
+            e.preventDefault();
+        }
+    };
+
     const form = useRef();
     const [alertVisible, setAlertVisible] = useState(false);
 
@@ -155,7 +162,7 @@ export const Contacto = () => {
                                             Celular
                                         </label>
                                         <input
-                                            type="number"
+                                            type="tel"
                                             placeholder="Ej. 6692847395"
                                             className="block w-full mt-1 mb-5 border-b-2 border-[#93c5fd] text-white shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
                                             p-[.5rem] bg-inherit"
@@ -163,7 +170,9 @@ export const Contacto = () => {
                                             name="celular"
                                             value={ celular }
                                             onChange={ onInputChange }
-                                            required
+                                            onKeyDown={onCelularChange}
+                                            maxLength="12"
+s                                            required
                                         />
 
                                         <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="servicio">
