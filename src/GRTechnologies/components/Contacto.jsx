@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 import {
     Card,
     CardBody,
@@ -10,7 +11,6 @@ import {
     Alert,
 } from "@material-tailwind/react";
 import { useFormPropio } from "../hooks/useFormPropio";
-import { useForm, ValidationError } from '@formspree/react';
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { ServiciosInfo } from "../../data/serviciosInfo";
 
@@ -22,19 +22,25 @@ export const Contacto = () => {
         servicio: '',
         comentarios: '',
     });
-    const [state, handleSubmit] = useForm("mkndrjyl");
-    const [envioForm, setEnvioForm] = useState(false);
 
-    useEffect(() => {
-        if (state.succeeded) {
-            onResetForm();
-            setEnvioForm(true);
-            setTimeout(() => {
-                setEnvioForm(false);
-            }, 3000);
-        }
+    const form = useRef();
 
-    }, [state.submitting]);
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs
+            .sendForm('service_9rfara5', 'template_dkqpqil', form.current, {
+                publicKey: '_799lIJ7RXftySiG7',
+            })
+            .then(
+                () => {
+                console.log('SUCCESS!');
+                },
+                (error) => {
+                console.log('FAILED...', error.text);
+                },
+            );
+    }
 
     const contactoRef = useScrollAnimation(0.05, 'animate__lightSpeedInRight');
 
@@ -46,7 +52,6 @@ export const Contacto = () => {
             >
                 Solicitar
             </Typography>
-            <Alert color="green" className={`max-w-[62rem] mx-auto mt-[4rem] ${envioForm == true ? '' : 'hidden'}`}>Formulario enviado correctamente.</Alert>
             
             <div ref={contactoRef} className="pb-[3rem] lg:pb-[8rem] flex flex-col lg:flex-row justify-center items-center lg:items-stretch lg:mt-[4rem]">
 
@@ -121,9 +126,9 @@ export const Contacto = () => {
                                 }}
                             >
                                 <TabPanel value="card" className="p-0">
-                                <form className="mt-2 flex flex-col gap-4" onSubmit={handleSubmit}>
+                                <form ref={form} className="mt-2 flex flex-col gap-4" onSubmit={sendEmail}>
                                     <div>
- 
+
                                         <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="email">
                                             Email
                                         </label>
@@ -137,11 +142,6 @@ export const Contacto = () => {
                                             value={ email }
                                             onChange={ onInputChange }
                                             required
-                                        />
-                                        <ValidationError 
-                                            prefix="Email" 
-                                            field="email"
-                                            errors={state.errors}
                                         />
 
                                         <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="celular">
@@ -157,11 +157,6 @@ export const Contacto = () => {
                                             value={ celular }
                                             onChange={ onInputChange }
                                             required
-                                        />
-                                        <ValidationError 
-                                            prefix="Celular" 
-                                            field="celular"
-                                            errors={state.errors}
                                         />
 
                                         <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="servicio">
@@ -186,11 +181,6 @@ export const Contacto = () => {
                                                 ))
                                             }
                                         </select>
-                                        <ValidationError 
-                                            prefix="servicio" 
-                                            field="servicio"
-                                            errors={state.errors}
-                                        />
                                         <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="comentarios">
                                             Comentarios
                                         </label>
@@ -203,18 +193,15 @@ export const Contacto = () => {
                                             className="block w-full mt-1 mb-5 border-[#93c5fd] border-2 rounded-md px-3.5 py-2 text-white shadow-sm ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-inherit"
                                             required>
                                         </textarea>
-                                        <ValidationError 
-                                            prefix="Comentarios" 
-                                            field="comentarios"
-                                            errors={state.errors}
-                                        />
 
                                     </div>
                                     <Button 
                                         size="lg"
                                         className="bg-[#a70267] hover:bg-[#a70283] mt-6 text-xl"
                                         type="submit"
-                                        disabled={state.submitting}
+                                        onClick={ () => { setTimeout(() => {
+                                            onResetForm();
+                                        }, 2000); } }
                                     >
                                         Solicitar Cotizacion
                                     </Button>

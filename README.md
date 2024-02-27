@@ -22,17 +22,17 @@ Nos ocupamos de la salud continua de tu sitio web. Ofrecemos servicios de manten
 
 ## Cómo Empezar 🚀
 
-1. Explora nuestro [sitio web](https://grs-technologies.netlify.app/) para obtener inspiración y ver ejemplos de nuestro trabajo.
-2. ¡Contacta con nosotros! Envía un correo electrónico a [grstech1139@gmail.com](mailto:grstech1139@gmail.com) y comencemos a dar vida a tu visión digital.
+1. Explora nuestro [sitio web](https://grstechs.com/) para obtener inspiración y ver ejemplos de nuestro trabajo.
+2. ¡Contacta con nosotros! Envía un correo electrónico a [contacto@grstechs.com](mailto:contacto@grstechs.com) y comencemos a dar vida a tu visión digital.
 
 ## Contacto 📞
 
 Estamos aquí para responder a cualquier pregunta y discutir tus proyectos. ¡No dudes en ponerte en contacto con nosotros!
 
-- [grstech1139@gmail.com](mailto:grstech1139@gmail.com)
+- [contacto@grstechs.com](mailto:contacto@grstechs.com)
 - [Facebook](https://www.facebook.com/profile.php?id=61556454782524)
 - [Instagram](https://www.instagram.com/grs_technologies/)
-- [Sitio Web](https://grs-technologies.netlify.app/)
+- [Sitio Web](https://grstechs.com/)
 - [Youtube](https://www.youtube.com/channel/UC_bUID-7eg1fN5ad5Q8CzCQ)
 
 
