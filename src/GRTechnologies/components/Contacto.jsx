@@ -25,10 +25,23 @@ export const Contacto = () => {
     });
 
     const onCelularChange = (e) => {
-        const charCode = e.which ? e.which : e.keyCode;
-        if (charCode < 48 || charCode > 57) {
+        if (
+            !(
+              e.ctrlKey ||
+              e.altKey ||
+              (e.keyCode >= 48 && e.keyCode <= 57) || // Números del teclado alfanumérico
+              (e.keyCode >= 96 && e.keyCode <= 105) || // Números del teclado numérico
+              e.keyCode === 8 || // Tecla de retroceso
+              e.keyCode === 9 || // Tecla Tab
+              e.keyCode === 13 || // Tecla Enter
+              e.keyCode === 27 || // Tecla Escape
+              e.keyCode === 37 || // Flecha izquierda
+              e.keyCode === 39 || // Flecha derecha
+              e.keyCode === 46 // Tecla Suprimir
+            )
+          ) {
             e.preventDefault();
-        }
+          }
     };
 
     const form = useRef();
@@ -170,9 +183,9 @@ export const Contacto = () => {
                                             name="celular"
                                             value={ celular }
                                             onChange={ onInputChange }
-                                            onKeyDown={onCelularChange}
+                                            onKeyDown={e => onCelularChange(e)}
                                             maxLength="12"
-s                                            required
+                                            required
                                         />
 
                                         <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="servicio">
