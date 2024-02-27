@@ -16,6 +16,7 @@ import { ServiciosInfo } from "../../data/serviciosInfo";
 
 export const Contacto = () => {
     const [type, setType] = useState("card");
+    
     const { formState, email, celular, servicio, comentarios, onInputChange, onResetForm, setFormState } = useFormPropio({
         email: '',
         celular: '',
@@ -24,17 +25,23 @@ export const Contacto = () => {
     });
 
     const form = useRef();
+    const [alertVisible, setAlertVisible] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
     
+        onResetForm();
         emailjs
             .sendForm('service_9rfara5', 'template_dkqpqil', form.current, {
                 publicKey: '_799lIJ7RXftySiG7',
             })
             .then(
                 () => {
-                console.log('SUCCESS!');
+                    console.log('SUCCESS!');
+                    setAlertVisible(true); // Mostrar la alerta
+                    setTimeout(() => {
+                        setAlertVisible(false); // Ocultar la alerta después de 3 segundos
+                    }, 3000);
                 },
                 (error) => {
                 console.log('FAILED...', error.text);
@@ -199,12 +206,16 @@ export const Contacto = () => {
                                         size="lg"
                                         className="bg-[#a70267] hover:bg-[#a70283] mt-6 text-xl"
                                         type="submit"
-                                        onClick={ () => { setTimeout(() => {
-                                            onResetForm();
-                                        }, 2000); } }
                                     >
                                         Solicitar Cotizacion
                                     </Button>
+
+                                    {/* Mostrar la alerta si el estado es verdadero */}
+                                        {alertVisible && (
+                                            <div className="text-center text-2xl my-2 p-3 bg-green-500 text-white font-bold rounded-[0.5rem]">
+                                                Formulario Enviado Correctamente
+                                            </div>
+                                        )}
 
                                 </form>
                                 </TabPanel>
