@@ -27,22 +27,32 @@ export const Contacto = () => {
     const onCelularChange = (e) => {
         if (
             !(
-              e.ctrlKey ||
-              e.altKey ||
-              (e.keyCode >= 48 && e.keyCode <= 57) || // Números del teclado alfanumérico
-              (e.keyCode >= 96 && e.keyCode <= 105) || // Números del teclado numérico
-              e.keyCode === 8 || // Tecla de retroceso
-              e.keyCode === 9 || // Tecla Tab
-              e.keyCode === 13 || // Tecla Enter
-              e.keyCode === 27 || // Tecla Escape
-              e.keyCode === 37 || // Flecha izquierda
-              e.keyCode === 39 || // Flecha derecha
-              e.keyCode === 46 // Tecla Suprimir
-            )
-          ) {
+                e.ctrlKey ||
+                e.altKey ||
+                (e.keyCode >= 48 && e.keyCode <= 57) || // Números del teclado alfanumérico
+                (e.keyCode >= 96 && e.keyCode <= 105) || // Números del teclado numérico
+                e.keyCode === 8 || // Tecla de retroceso
+                e.keyCode === 9 || // Tecla Tab
+                e.keyCode === 13 || // Tecla Enter
+                e.keyCode === 27 || // Tecla Escape
+                e.keyCode === 37 || // Flecha izquierda
+                e.keyCode === 39 || // Flecha derecha
+                e.keyCode === 46 // Tecla Suprimir
+                )
+        ) {
             e.preventDefault();
-          }
+        }
+
     };
+
+    const onPasteCelular = (e) => {
+        // Obtener el texto que se está pegando
+        const pastedText = e.clipboardData.getData('text/plain');
+        // Verificar si el texto contiene solo números
+        if (!/^\d*$/.test(pastedText)) {
+            e.preventDefault();
+        }
+    }
 
     const form = useRef();
     const [alertVisible, setAlertVisible] = useState(false);
@@ -184,6 +194,7 @@ export const Contacto = () => {
                                             value={ celular }
                                             onChange={ onInputChange }
                                             onKeyDown={e => onCelularChange(e)}
+                                            onPaste={e => onPasteCelular(e)}
                                             maxLength="12"
                                             required
                                         />
