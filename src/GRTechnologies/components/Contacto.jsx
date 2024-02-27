@@ -54,12 +54,23 @@ export const Contacto = () => {
         }
     }
 
+    const validarEmail = (email) => {
+        const regex = /^\w+([.-_+]?\w+)@\w+([.-]?\w+)(\.\w{2,10})+$/;
+        const resultado = regex.test(email);
+        if (!resultado) {
+            console.log("El correo electrónico ingresado no es válido.");
+        }
+        return resultado;
+    };
+
     const form = useRef();
     const [alertVisible, setAlertVisible] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
     
+        if(validarEmail(email) == false) return;
+
         onResetForm();
         emailjs
             .sendForm('service_9rfara5', 'template_dkqpqil', form.current, {
