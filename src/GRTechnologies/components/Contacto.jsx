@@ -13,6 +13,7 @@ import {
 import { useFormPropio } from "../hooks/useFormPropio";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { ServiciosInfo } from "../../data/serviciosInfo";
+import { Alerta } from "./";
 
 export const Contacto = () => {
     const [type, setType] = useState("card");
@@ -64,12 +65,22 @@ export const Contacto = () => {
     };
 
     const form = useRef();
+    const emailRef = useRef();
+    const telefonoRef = useRef();
     const [alertVisible, setAlertVisible] = useState(false);
+    const [error, setError] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
     
-        if(validarEmail(email) == false) return;
+        if(validarEmail(email) == false) {
+            setError(true);
+            emailRef.current.focus();
+            setTimeout(() => {
+                setError(false);
+            }, 2000);
+            return;
+        }
 
         onResetForm();
         emailjs
@@ -181,6 +192,7 @@ export const Contacto = () => {
                                             Email
                                         </label>
                                         <input
+                                            ref={ emailRef }
                                             type="email"
                                             placeholder="Ej. name@gmail.com"
                                             className="block w-full mt-1 mb-5 border-b-2 border-[#93c5fd] text-white shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
@@ -196,6 +208,7 @@ export const Contacto = () => {
                                             Celular
                                         </label>
                                         <input
+                                            ref={ telefonoRef }
                                             type="tel"
                                             placeholder="Ej. 6692847395"
                                             className="block w-full mt-1 mb-5 border-b-2 border-[#93c5fd] text-white shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
@@ -256,9 +269,10 @@ export const Contacto = () => {
 
                                     {/* Mostrar la alerta si el estado es verdadero */}
                                         {alertVisible && (
-                                            <div className="text-center text-2xl my-2 p-3 bg-green-500 text-white font-bold rounded-[0.5rem]">
-                                                Formulario Enviado Correctamente
-                                            </div>
+                                            <Alerta mensaje="Formulario Enviado Correctamente" tipo="success" />
+                                        )}
+                                        {error && (
+                                            <Alerta mensaje="Hubo un error" tipo="error" />
                                         )}
 
                                 </form>

@@ -9,3 +9,4 @@ export * from './TecnologiasGroup';
 export * from './TecnologiasCard';
 export * from './CarruselClientes';
 export * from './TypingEffect';
+export * from './Alerta';
