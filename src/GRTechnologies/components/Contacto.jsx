@@ -25,6 +25,8 @@ export const Contacto = () => {
         comentarios: '',
     });
 
+    const [mensaje, setMensaje] = useState();
+
     const onCelularChange = (e) => {
         if (
             !(
@@ -81,19 +83,21 @@ export const Contacto = () => {
     
         if(!validarEmail(email)) {
             setError(true);
+            setMensaje('El correo electrónico ingresado no es válido.');
             emailRef.current.focus();
             setTimeout(() => {
                 setError(false);
-            }, 2000);
+            }, 3000);
             return;
         }
 
         if(!validarCelular(celular)) {
             setError(true);
+            setMensaje('El celular ingresado no es válido.');
             celularRef.current.focus();
             setTimeout(() => {
                 setError(false);
-            }, 2000);
+            }, 3000);
             return;
         }
 
@@ -146,11 +150,11 @@ export const Contacto = () => {
                         </div>
                         <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
                             <img loading="lazy" src="https://img.icons8.com/ios-glyphs/30/iphone.png" alt="iphone" className="bg-[#4b5563] rounded-full p-[.2rem] w-[34px] h-[34px]"/>
-                            <p className="text-white">+52 669 269 88 56</p>
+                            <p className="text-white">+52 669 446 7685</p>
                         </div>
                         <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
                             <img loading="lazy" src="https://img.icons8.com/material-rounded/24/new-post.png" alt="new-post" className="bg-[#4b5563] rounded-full p-[.2rem] w-[34px] h-[34px]"/>
-                            <p className="text-white">grstech1139@gmail.com</p>
+                            <p className="text-white">contacto@grstechs.com</p>
                         </div>
                             
                         
@@ -287,7 +291,7 @@ export const Contacto = () => {
                                             <Alerta mensaje="Formulario Enviado Correctamente" tipo="success" />
                                         )}
                                         {error && (
-                                            <Alerta mensaje="Hubo un error" tipo="error" />
+                                            <Alerta mensaje={mensaje} tipo="error" />
                                         )}
 
                                 </form>
