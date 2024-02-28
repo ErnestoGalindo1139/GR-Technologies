@@ -64,18 +64,33 @@ export const Contacto = () => {
         return resultado;
     };
 
+    const validarCelular = (celular) => {
+        const regex = /^(?:\+\d{1,3}\s?)?\d{6,14}$/;
+        const resultado = regex.test(celular);
+        return resultado;
+    };
+
     const form = useRef();
     const emailRef = useRef();
-    const telefonoRef = useRef();
+    const celularRef = useRef();
     const [alertVisible, setAlertVisible] = useState(false);
     const [error, setError] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
     
-        if(validarEmail(email) == false) {
+        if(!validarEmail(email)) {
             setError(true);
             emailRef.current.focus();
+            setTimeout(() => {
+                setError(false);
+            }, 2000);
+            return;
+        }
+
+        if(!validarCelular(celular)) {
+            setError(true);
+            celularRef.current.focus();
             setTimeout(() => {
                 setError(false);
             }, 2000);
@@ -208,7 +223,7 @@ export const Contacto = () => {
                                             Celular
                                         </label>
                                         <input
-                                            ref={ telefonoRef }
+                                            ref={ celularRef }
                                             type="tel"
                                             placeholder="Ej. 6692847395"
                                             className="block w-full mt-1 mb-5 border-b-2 border-[#93c5fd] text-white shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
