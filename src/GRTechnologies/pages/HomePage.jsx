@@ -36,7 +36,7 @@ export const HomePage = () => {
             <Proyectos />
 
             {/* Nosotros */}
-            <div className="color3">
+            <div className="color3 py-[1rem]">
                 {/* Botones de selección de sección */}
                 <SectionButton secciones={secciones} seleccionActual={seccionActual} cambiarSeccion={cambiarSeccion} />
 

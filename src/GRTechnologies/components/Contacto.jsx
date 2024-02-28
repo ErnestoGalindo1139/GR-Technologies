@@ -119,7 +119,7 @@ export const Contacto = () => {
     const contactoRef = useScrollAnimation(0.05, 'animate__lightSpeedInRight');
 
     return (
-        <div className="bg-[#000016] lg:bg-[#1b1d33]" id="contacto">
+        <div className="bg-[#000016] lg:bg-[#353950]" id="contacto">
             <Typography 
                 variant="h2"
                 className="text-center text-blue-600 text-[3rem] pt-10"
