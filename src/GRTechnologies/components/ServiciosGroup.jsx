@@ -22,8 +22,8 @@ export const ServiciosGroup = () => {
                 </div>
             </div>
 
-            <div className="px-0 sm:px-10 mx-auto max-w-[1500px]">
-                <div className="gap-10 px-12 2xl:px-4 py-4 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3">
+            <div className="px-0 sm:px-10 mx-auto">
+                <div className="gap-10 px-12 2xl:px-4 py-4 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4">
                     {
                         ServiciosInfo.map((info) => {
                             return (

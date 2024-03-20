@@ -1,16 +1,23 @@
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import {
+    Navigation,
+    Pagination,
+    Scrollbar,
+    A11y,
+    Autoplay,
+    Mousewheel,
+    Keyboard,
+} from "swiper/modules";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/autoplay';
-import { clientes } from '../../data';
-import { useEffect, useState } from 'react';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
+import { useEffect, useState } from "react";
 
 export const CarruselClientes = () => {
 
@@ -40,29 +47,91 @@ export const CarruselClientes = () => {
         };
     }, []);
 
-
     return (
-        <div className='color5 py-16 mx-auto' id="clientes">
-            <h3 className="text-white md:mb-4 text-center text-4xl md:text-5xl md:pb-8">Nuestros Clientes</h3>
-            <Swiper
-                // install Swiper modules
-                className='max-w-[1500px]'
-                grabCursor={true}
-                modules={[Pagination, A11y, Autoplay]}
-                spaceBetween={50}
-                slidesPerView={slidesPerView}
-                autoplay={{ delay: 2000, disableOnInteraction: false }}
-                pagination={{ clickable: true }}
+        <div className="color5 pb-[2rem]">
+
+            <div
+                className="md:container mx-2 py-16 md:mx-auto"
+                id="clientes"
             >
-                {
-                    clientes.map( cliente => (
-                        <SwiperSlide key={ cliente.id }>
-                            <img loading="lazy" className=' bg-deep-purple-900 p-2 lg:p-4 w-[70%] h-64 md:w-[65%] md:h-56 xl:w-[77%] xl:h-[18rem] rounded-[2.5rem] my-16 md:my-16 mx-auto hover:opacity-50 transition-transform hover:scale-[1.2]' src={ cliente.url } alt={ cliente.nombre } />
-                        </SwiperSlide>
-                    ))
-                }
+                <h3 className="text-white font-bold md:mb-4 text-center text-4xl md:text-5xl pb-8">
+                Nuestros Casos de <span className="text-blue-600">Éxito</span>
+                </h3>
+                <Swiper
+                slidesPerView={slidesPerView}
+                spaceBetween={30}
+                cssMode={true}
+                navigation={true}
+                mousewheel={true}
+                keyboard={true}
+                pagination={true}
                 
-            </Swiper>
+                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                className="mySwiper"
+                >
+                <SwiperSlide>
+                    <div className="relative h-[40rem]">
+                    <img
+                        className=" rounded-lg object-cover absolute w-full h-full  opacity-100  transition-opacity duration-300 object-left-top"
+                        src="https://res.cloudinary.com/dfszyib7k/image/upload/v1709000024/grs-pagina-web/Clientes/mzi7uejbblnclr8rxidm.png"
+                        alt=""
+                    />
+                    <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
+                        <h1 className="absolute bottom-1 m-7 border p-1">BHouse</h1>
+                        {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
+                        Da click para visualizar
+                        </p> */}
+                    </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="relative h-[40rem]">
+                    <img
+                        className=" rounded-lg object-cover absolute w-full h-full  opacity-100  transition-opacity duration-300 border border-gray-900"
+                        src="https://res.cloudinary.com/dfszyib7k/image/upload/v1708999726/grs-pagina-web/Clientes/m1xma5cpy2bg8ncmqsuw.png"
+                        alt=""
+                    />
+                    <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
+                        <h1 className=" absolute bottom-1 m-7">Misso sushi</h1>
+                        {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
+                        Da click para visualizar
+                        </p> */}
+                    </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="relative h-[40rem]">
+                    <img
+                        className=" rounded-lg object-cover absolute w-full h-full  opacity-100  transition-opacity duration-300 border border-gray-900"
+                        src="https://res.cloudinary.com/dfszyib7k/image/upload/v1710968848/grs-pagina-web/Clientes/elWalamito_xn4bvk.jpg"
+                        alt=""
+                    />
+                    <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
+                        <h1 className=" absolute bottom-1 m-7">El Walamito Construcciones</h1>
+                        {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
+                        Da click para visualizar
+                        </p> */}
+                    </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                <div className="relative h-[40rem]">
+                    <img
+                    className=" rounded-lg object-cover absolute w-full h-full  opacity-100  transition-opacity duration-300"
+                    src="https://res.cloudinary.com/dfszyib7k/image/upload/v1709000690/grs-pagina-web/Clientes/c7cyo157bamly5onn8h3.jpg"
+                    alt=""
+                    />
+                    <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
+                    <h1 className=" absolute bottom-1 m-7">Yarda El Marino</h1>
+                    {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
+                        Da click para visualizar
+                    </p> */}
+                    </div>
+                </div>
+                </SwiperSlide>
+                </Swiper>
+            </div>
         </div>
+
     );
 };
