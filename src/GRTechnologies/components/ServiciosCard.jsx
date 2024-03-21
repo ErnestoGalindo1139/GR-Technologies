@@ -2,7 +2,7 @@
 import { BackgroundGradient } from "./background-gradient";
 
 export const ServiciosCard = ({ info }) => {
-    const { titulo, descripcion, colorHeading, colorText, id } = info;
+    const { titulo, descripcion, precio, colorHeading, colorText, id } = info;
 
     return (
         <>
@@ -29,6 +29,7 @@ export const ServiciosCard = ({ info }) => {
                                     {lista}
                                 </li>
                             ))}
+                            <li className="text-2xl mt-[1rem] text-center py-[.4rem] text-[#22c55e] font-bold">Precio {precio}</li>
                         </ul>
                     </div>
                 </BackgroundGradient>
@@ -58,6 +59,7 @@ export const ServiciosCard = ({ info }) => {
                                     {lista}
                                 </li>
                             ))}
+                            <li className="text-2xl mt-[1rem] text-center py-[.4rem] text-[#22c55e] font-bold">MX {precio}</li>
                         </ul>
                     </div>
                 </div>
