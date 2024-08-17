@@ -2,7 +2,7 @@
 import { BackgroundGradient } from "./background-gradient";
 
 export const ServiciosCard = ({ info }) => {
-    const { titulo, descripcion, precio, colorHeading, colorText, id } = info;
+    const { titulo, descripcion, colorHeading, colorText, id } = info;
 
     return (
         <>
@@ -29,7 +29,7 @@ export const ServiciosCard = ({ info }) => {
                                     {lista}
                                 </li>
                             ))}
-                            <li className="text-2xl mt-[1rem] text-center py-[.4rem] text-[#22c55e] font-bold">Precio {precio}</li>
+                            {/* <li className="text-2xl mt-[1rem] text-center py-[.4rem] text-[#22c55e] font-bold">Precio {precio}</li> */}
                         </ul>
                     </div>
                 </BackgroundGradient>
@@ -47,19 +47,19 @@ export const ServiciosCard = ({ info }) => {
 
                         <ul className="text-white px-8">
                             {descripcion.map((lista, index) => (
-                                <li 
-                                    key={index} 
+                                <li
+                                    key={index}
                                     className="border-b border-[#3f3f46] py-4 flex text-sm sm:text-normal"
                                 >
-                                    <img 
-                                        loading="lazy" 
-                                        src={`https://img.icons8.com/ios-filled/50/${colorHeading}/checkmark--v1.png`} alt="external-Services-web-analytics-and-development-apps-smashingstocks-detailed-outline-smashing-stocks" 
-                                        className="w-6 h-6 mr-3" 
+                                    <img
+                                        loading="lazy"
+                                        src={`https://img.icons8.com/ios-filled/50/${colorHeading}/checkmark--v1.png`} alt="external-Services-web-analytics-and-development-apps-smashingstocks-detailed-outline-smashing-stocks"
+                                        className="w-6 h-6 mr-3"
                                     />
                                     {lista}
                                 </li>
                             ))}
-                            <li className="text-2xl mt-[1rem] text-center py-[.4rem] text-[#22c55e] font-bold">MX {precio}</li>
+                            {/* <li className="text-2xl mt-[1rem] text-center py-[.4rem] text-[#22c55e] font-bold">MX {precio}</li> */}
                         </ul>
                     </div>
                 </div>
