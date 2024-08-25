@@ -9,7 +9,7 @@ import { Proyectos } from "../components/Proyectos";
 
 export const HomePage = () => {
 
-    const [seccionActual, setSeccionActual] = useState('nosotros');
+    const [seccionActual, setSeccionActual] = useState('Nosotros');
 
     const cambiarSeccion = (nuevaSeccion) => {
         setSeccionActual(nuevaSeccion);

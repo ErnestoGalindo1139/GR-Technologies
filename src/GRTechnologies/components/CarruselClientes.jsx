@@ -54,7 +54,7 @@ export const CarruselClientes = () => {
                 <h3
                     className="text-white font-bold md:mb-4 text-center text-4xl md:text-5xl pb-8"
                 >
-                    Nuestros Casos de
+                    Nuestros Casos de&nbsp;
                     <span
                         className="text-blue-600"
                     >
@@ -79,14 +79,16 @@ export const CarruselClientes = () => {
                                 src="https://res.cloudinary.com/dfszyib7k/image/upload/v1709000024/grs-pagina-web/Clientes/mzi7uejbblnclr8rxidm.png"
                                 alt=""
                             />
-                            <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
-                                <a href="https://bhouse.grstechs.com">
-                                    <h1 className="absolute bottom-1 m-7 border p-1">BHouse</h1>
-                                </a>
-                                {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
-                                Da click para visualizar
-                                </p> */}
-                            </div>
+                            <a target="_blank" rel="noreferrer" href="https://bhouse.grstechs.com">
+                                <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
+                                    {/* <a target="_blank" rel="noreferrer" href="https://bhouse.grstechs.com"> */}
+                                        <h1 className="absolute bottom-1 m-7 border p-1">BHouse</h1>
+                                    {/* </a> */}
+                                    {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
+                                    Da click para visualizar
+                                    </p> */}
+                                </div>
+                            </a>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -97,7 +99,7 @@ export const CarruselClientes = () => {
                             alt=""
                             />
                             <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
-                                <a href="">
+                                <a target="_blank" rel="noreferrer" href="">
                                     <h1 className=" absolute bottom-1 m-7">Puerta del Cielo</h1>
                                 </a>
                             {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
@@ -113,14 +115,17 @@ export const CarruselClientes = () => {
                                 src="https://res.cloudinary.com/dfszyib7k/image/upload/v1723921620/grs-pagina-web/Clientes/CR-Comercial_eyphuu.png"
                                 alt=""
                             />
-                            <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
-                                <a href="https://www.cr-comercial.com">
-                                    <h1 className="absolute bottom-1 m-7">CR Comercial</h1>
-                                </a>
-                                {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
-                                Da click para visualizar
-                                </p> */}
-                            </div>
+                            <a target="_blank" rel="noreferrer" href="https://www.cr-comercial.com">
+                                <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
+                                    {/* <a target="_blank" rel="noreferrer" href="https://www.cr-comercial.com"> */}
+                                        <h1 className="absolute bottom-1 m-7">CR Comercial</h1>
+                                    {/* </a> */}
+                                    {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
+                                    Da click para visualizar
+                                    </p> */}
+                                </div>
+                            </a>
+
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -130,14 +135,35 @@ export const CarruselClientes = () => {
                                 src="https://res.cloudinary.com/dfszyib7k/image/upload/v1708999726/grs-pagina-web/Clientes/m1xma5cpy2bg8ncmqsuw.png"
                                 alt=""
                             />
-                            <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
-                                <a href="https://misso-sushi.grstechs.com">
-                                    <h1 className="absolute bottom-1 m-7">Misso sushi</h1>
-                                </a>
-                                {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
-                                Da click para visualizar
-                                </p> */}
-                            </div>
+                            <a target="_blank" rel="noreferrer" href="https://misso-sushi.grstechs.com">
+                                <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
+                                    {/* <a target="_blank" rel="noreferrer" href="https://misso-sushi.grstechs.com"> */}
+                                        <h1 className="absolute bottom-1 m-7">Misso sushi</h1>
+                                    {/* </a> */}
+                                    {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
+                                    Da click para visualizar
+                                    </p> */}
+                                </div>
+                            </a>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="relative h-[40rem]">
+                            <img
+                                className=" rounded-lg object-contain absolute w-full h-full  opacity-100  transition-opacity duration-300 border border-gray-900"
+                                src="https://cdn.pixabay.com/photo/2022/04/14/04/45/vintage-aesthetic-7131604_640.jpg"
+                                alt=""
+                            />
+                            <a target="_blank" rel="noreferrer" href="https://bocadodivino.grstechs.com">
+                                <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
+                                    {/* <a target="_blank" rel="noreferrer" href="https://misso-sushi.grstechs.com"> */}
+                                        <h1 className="absolute bottom-1 m-7">Bocado Divino</h1>
+                                    {/* </a> */}
+                                    {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
+                                    Da click para visualizar
+                                    </p> */}
+                                </div>
+                            </a>
                         </div>
                     </SwiperSlide>
                 </Swiper>

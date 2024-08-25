@@ -139,7 +139,7 @@ export const Contacto = () => {
                         variant="h2"
                         className="text-center text-white text-[2rem] mt-[4rem] lg:mt-[7rem]"
                     >
-                        Contactanos
+                        Contáctanos
                     </Typography>
                     <div className="w-3/4 lg:w-[16rem] h-[.2rem] bg-[#d946ef] mx-auto mt-[2rem]"></div>
                     <div className="flex flex-col gap-5 -center mt-[2rem] mb-[2rem] ml-[4rem]">
@@ -207,7 +207,7 @@ export const Contacto = () => {
                                 <form ref={form} className="mt-2 flex flex-col gap-4" onSubmit={sendEmail}>
                                     <div>
 
-                                        <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="email">
+                                        <label color="blue-gray" className="font-bold text-white text-xl" htmlFor="email">
                                             Email
                                         </label>
                                         <input
@@ -223,7 +223,7 @@ export const Contacto = () => {
                                             required
                                         />
 
-                                        <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="celular">
+                                        <label color="blue-gray" className="font-bold text-white text-xl" htmlFor="celular">
                                             Celular
                                         </label>
                                         <input
@@ -242,7 +242,7 @@ export const Contacto = () => {
                                             required
                                         />
 
-                                        <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="servicio">
+                                        <label color="blue-gray" className="font-bold text-white text-xl" htmlFor="servicio">
                                             Seleccione un servicio
                                         </label>
                                         <select
@@ -264,7 +264,7 @@ export const Contacto = () => {
                                                 ))
                                             }
                                         </select>
-                                        <label color="blue-gray" className="font-medium text-white text-xl" htmlFor="comentarios">
+                                        <label color="blue-gray" className="font-bold text-white text-xl" htmlFor="comentarios">
                                             Comentarios
                                         </label>
                                         <textarea 
@@ -283,7 +283,7 @@ export const Contacto = () => {
                                         className="bg-[#a70267] hover:bg-[#a70283] mt-6 text-xl"
                                         type="submit"
                                     >
-                                        Solicitar Cotizacion
+                                        Solicitar Cotización
                                     </Button>
 
                                     {/* Mostrar la alerta si el estado es verdadero */}
