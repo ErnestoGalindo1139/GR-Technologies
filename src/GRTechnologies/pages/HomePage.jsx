@@ -5,7 +5,6 @@ import { BannerComponent } from "../components/BannerComponent";
 import { Contacto } from "../components/Contacto";
 import { FooterComponent } from "../components/FooterComponent";
 import { ServiciosGroup } from "../components/ServiciosGroup";
-import { Proyectos } from "../components/Proyectos";
 
 export const HomePage = () => {
 
@@ -31,9 +30,6 @@ export const HomePage = () => {
 
             {/* Clientes */}
             <CarruselClientes />
-
-            {/* Proyectos */}
-            <Proyectos />
 
             {/* Nosotros */}
             <div className="color3 py-[1rem]">

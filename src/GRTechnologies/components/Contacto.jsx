@@ -1,15 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
-import {
-    Card,
-    CardBody,
-    Button,
-    Typography,
-    Tabs,
-    TabsBody,
-    TabPanel,
-    Alert,
-} from "@material-tailwind/react";
 import { useFormPropio } from "../hooks/useFormPropio";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { ServiciosInfo } from "../../data/serviciosInfo";
@@ -123,185 +113,215 @@ export const Contacto = () => {
     const contactoRef = useScrollAnimation(0.05, 'animate__lightSpeedInRight');
 
     return (
-        <div className="bg-[#000016] lg:bg-[#353950]" id="contacto">
-            <Typography 
-                variant="h2"
-                className="text-center text-blue-600 text-[3rem] pt-10"
-            >
-                Solicitar
-            </Typography>
-            
-            <div ref={contactoRef} className="pb-[3rem] lg:pb-[8rem] flex flex-col lg:flex-row justify-center items-center lg:items-stretch lg:mt-[4rem]">
-
-            
-                <div className="bg-[#000016] w-full lg:w-[22rem] lg:rounded-s-xl pb-[3rem] lg:pb-[0rem] lg:mx-0">
-                    <Typography 
-                        variant="h2"
-                        className="text-center text-white text-[2rem] mt-[4rem] lg:mt-[7rem]"
-                    >
-                        Contáctanos
-                    </Typography>
-                    <div className="w-3/4 lg:w-[16rem] h-[.2rem] bg-[#d946ef] mx-auto mt-[2rem]"></div>
-                    <div className="flex flex-col gap-5 -center mt-[2rem] mb-[2rem] ml-[4rem]">
-
-                        <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
-                            <img loading="lazy" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker" className="bg-[#4b5563] rounded-full p-[.2rem] w-[34px] h-[34px]"/>
-                            <p className="text-white">Mazatlán, Sinaloa, México</p>
-                        </div>
-                        <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
-                            <img loading="lazy" src="https://img.icons8.com/ios-glyphs/30/iphone.png" alt="iphone" className="bg-[#4b5563] rounded-full p-[.2rem] w-[34px] h-[34px]"/>
-                            <p className="text-white">+52 669 446 7685</p>
-                        </div>
-                        <div className="flex items-center gap-3 md:ml-[4rem] lg:ml-0">
-                            <img loading="lazy" src="https://img.icons8.com/material-rounded/24/new-post.png" alt="new-post" className="bg-[#4b5563] rounded-full p-[.2rem] w-[34px] h-[34px]"/>
-                            <p className="text-white">contacto@grstechs.com</p>
-                        </div>
-                            
-                        
-
-                    </div>
-                    <div className="mb-8 w-3/4 lg:w-[16rem] h-[.2rem] bg-[#d946ef] mx-auto"></div>
-                    <div className="flex justify-center mt-[1rem] gap-5">
-                        <a href="https://www.instagram.com/grs_technologies/" title="Visita nuestro perfil de Instagram" className="cursor-pointer">
-                            <img className="w-[32px] h-[32px]" loading="lazy" src="https://img.icons8.com/ios/50/FE3073/instagram-new--v1.png" alt="instagram-new--v1"/>
-                        </a>
-
-                        <a href="https://www.facebook.com/profile.php?id=61556454782524" title="Visita nuestro perfil de Facebook" className="cursor-pointer">
-                            <img className="w-[32px] h-[32px]" loading="lazy" src="https://img.icons8.com/ios-filled/50/3F51B5/facebook-f.png" alt="facebook-f"/>
-                        </a>
-
-                        <a href="#" title="Visita nuestro perfil de LinkedIn" className="cursor-pointer">
-                            <img className="w-[32px] h-[32px]" loading="lazy" src="https://img.icons8.com/fluency/48/linkedin-2.png" alt="linkedin-2"/>
-                        </a>
-
-                        <a href="https://www.youtube.com/channel/UC_bUID-7eg1fN5ad5Q8CzCQ" title="Visita nuestro canal de YouTube" className="cursor-pointer">
-                            <img className="w-[34px] h-[34px]" loading="lazy" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/>
-                        </a>
-                    </div>
-                    
-                </div>
-
-                <div className="w-full lg:w-[40rem]">
-            
-                {/* bg-[#536c8d] */}
-                {/* bg-[#243a69] */}
-                <Card className="mr-auto ml-auto bg-[#000016]s p-[1rem]  rounded-none lg:rounded-e-xl bg-[#243a69]">
-                    <CardBody>
-                        <Tabs value={type} className="overflow-visible">
-                        
-                            <TabsBody
-                                className="!overflow-x-hidden !overflow-y-visible"
-                                animate={{
-                                initial: {
-                                    x: type === "card" ? 400 : -400,
-                                },
-                                mount: {
-                                    x: 0,
-                                },
-                                unmount: {
-                                    x: type === "card" ? 400 : -400,
-                                },
-                                }}
-                            >
-                                <TabPanel value="card" className="p-0">
-                                <form ref={form} className="mt-2 flex flex-col gap-4" onSubmit={sendEmail}>
-                                    <div>
-
-                                        <label color="blue-gray" className="font-bold text-white text-xl" htmlFor="email">
-                                            Email
-                                        </label>
-                                        <input
-                                            ref={ emailRef }
-                                            type="email"
-                                            placeholder="Ej. name@gmail.com"
-                                            className="block w-full mt-1 mb-5 border-b-2 border-[#93c5fd] text-white shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
-                                            p-[.5rem] bg-inherit"
-                                            id="email"
-                                            name="email"
-                                            value={ email }
-                                            onChange={ onInputChange }
-                                            required
-                                        />
-
-                                        <label color="blue-gray" className="font-bold text-white text-xl" htmlFor="celular">
-                                            Celular
-                                        </label>
-                                        <input
-                                            ref={ celularRef }
-                                            type="tel"
-                                            placeholder="Ej. 6692847395"
-                                            className="block w-full mt-1 mb-5 border-b-2 border-[#93c5fd] text-white shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
-                                            p-[.5rem] bg-inherit"
-                                            id="celular"
-                                            name="celular"
-                                            value={ celular }
-                                            onChange={ onInputChange }
-                                            onKeyDown={e => onCelularChange(e)}
-                                            onPaste={e => onPasteCelular(e)}
-                                            maxLength="12"
-                                            required
-                                        />
-
-                                        <label color="blue-gray" className="font-bold text-white text-xl" htmlFor="servicio">
-                                            Seleccione un servicio
-                                        </label>
-                                        <select
-                                            id="servicio"
-                                            name="servicio"
-                                            autoComplete="servicio-name"
-                                            className="block w-full mt-1 mb-5 border-b-2 border-[#93c5fd] shadow-sm ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
-                                            p-[.7rem] bg-inherit text-white"
-                                            value={ !servicio ? '0' : servicio }
-                                            onChange={onInputChange}
-                                            required
-                                        >
-                                            <option value="0" disabled className="text-black"> Seleccione un servicio </option>
-                                            {
-                                                ServiciosInfo.map( servicio => (
-                                                    <option key={servicio.id} value={servicio.id}  className="text-black">
-                                                        {servicio.titulo}
-                                                    </option>
-                                                ))
-                                            }
-                                        </select>
-                                        <label color="blue-gray" className="font-bold text-white text-xl" htmlFor="comentarios">
-                                            Comentarios
-                                        </label>
-                                        <textarea 
-                                            name="comentarios" 
-                                            id="comentarios" 
-                                            value={ comentarios }
-                                            onChange={ onInputChange }
-                                            rows="4" 
-                                            className="block w-full mt-1 mb-5 border-[#93c5fd] border-2 rounded-md px-3.5 py-2 text-white shadow-sm ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-inherit"
-                                            required>
-                                        </textarea>
-
-                                    </div>
-                                    <Button 
-                                        size="lg"
-                                        className="bg-[#a70267] hover:bg-[#a70283] mt-6 text-xl"
-                                        type="submit"
-                                    >
-                                        Solicitar Cotización
-                                    </Button>
-
-                                    {/* Mostrar la alerta si el estado es verdadero */}
-                                        {alertVisible && (
-                                            <Alerta mensaje="Formulario Enviado Correctamente" tipo="success" />
-                                        )}
-                                        {error && (
-                                            <Alerta mensaje={mensaje} tipo="error" />
-                                        )}
-
-                                </form>
-                                </TabPanel>
-                            </TabsBody>
-                        </Tabs>
-                    </CardBody>
-                </Card>
-                </div>
+        <div className="bg-gradient-to-b from-[#1a1d2e] to-[#0f1117] py-20" id="contacto">
+            <div className="max-w-7xl mx-auto px-6 sm:px-10">
                 
+                {/* Header */}
+                <div className="text-center mb-16">
+                    <h2 className="text-white font-bold text-4xl sm:text-5xl mb-4">
+                        ¿Listo para empezar tu proyecto?
+                    </h2>
+                    <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-4"></div>
+                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                        Cuéntanos sobre tu idea y te ayudaremos a hacerla realidad
+                    </p>
+                </div>
+
+                <div ref={contactoRef} className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+                    {/* Información de contacto */}
+                    <div className="lg:col-span-2">
+                        <div className="bg-[#1a1d2e] border border-white/10 rounded-2xl p-8 h-full">
+                            <h3 className="text-white font-bold text-2xl mb-8">Información de contacto</h3>
+                            
+                            <div className="space-y-6 mb-8">
+                                <div className="flex items-start gap-4 group">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors duration-300">
+                                        <img loading="lazy" src="https://img.icons8.com/ios-filled/50/3b82f6/marker.png" alt="ubicación" className="w-6 h-6"/>
+                                    </div>
+                                    <div>
+                                        <p className="text-gray-400 text-sm mb-1">Ubicación</p>
+                                        <p className="text-white font-medium">Mazatlán, Sinaloa, México</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4 group">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center group-hover:bg-green-500/20 transition-colors duration-300">
+                                        <img loading="lazy" src="https://img.icons8.com/ios-glyphs/30/10b981/iphone.png" alt="teléfono" className="w-6 h-6"/>
+                                    </div>
+                                    <div>
+                                        <p className="text-gray-400 text-sm mb-1">WhatsApp</p>
+                                        <a href="tel:+526693316005" className="text-white font-medium hover:text-green-400 transition-colors">
+                                            +52 669 331 6005
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start gap-4 group">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/10 border border-purple-500/20 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors duration-300">
+                                        <img loading="lazy" src="https://img.icons8.com/material-rounded/24/a855f7/new-post.png" alt="email" className="w-6 h-6"/>
+                                    </div>
+                                    <div>
+                                        <p className="text-gray-400 text-sm mb-1">Email</p>
+                                        <a href="mailto:contacto@grstechs.com" className="text-white font-medium hover:text-purple-400 transition-colors">
+                                            contacto@grstechs.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="border-t border-white/10 pt-8">
+                                <p className="text-gray-400 text-sm mb-4">Síguenos en redes sociales</p>
+                                <div className="flex gap-4">
+                                    <a 
+                                        href="https://www.instagram.com/grs_technologies/" 
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        title="Instagram"
+                                        className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:border-pink-500/50 hover:bg-pink-500/10 transition-all duration-300"
+                                    >
+                                        <img className="w-5 h-5" loading="lazy" src="https://img.icons8.com/ios/50/FE3073/instagram-new--v1.png" alt="Instagram"/>
+                                    </a>
+
+                                    <a 
+                                        href="https://www.facebook.com/profile.php?id=61556454782524" 
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        title="Facebook"
+                                        className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300"
+                                    >
+                                        <img className="w-5 h-5" loading="lazy" src="https://img.icons8.com/ios-filled/50/3F51B5/facebook-f.png" alt="Facebook"/>
+                                    </a>
+
+                                    <a 
+                                        href="#" 
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        title="LinkedIn"
+                                        className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:border-blue-400/50 hover:bg-blue-400/10 transition-all duration-300"
+                                    >
+                                        <img className="w-5 h-5" loading="lazy" src="https://img.icons8.com/fluency/48/linkedin-2.png" alt="LinkedIn"/>
+                                    </a>
+
+                                    <a 
+                                        href="https://www.youtube.com/channel/UC_bUID-7eg1fN5ad5Q8CzCQ" 
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        title="YouTube"
+                                        className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300"
+                                    >
+                                        <img className="w-5 h-5" loading="lazy" src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Formulario */}
+                    <div className="lg:col-span-3">
+                        <div className="bg-[#1a1d2e] border border-white/10 rounded-2xl p-8">
+                            <h3 className="text-white font-bold text-2xl mb-6">Envíanos un mensaje</h3>
+                            
+                            <form ref={form} className="space-y-6" onSubmit={sendEmail}>
+                                
+                                <div>
+                                    <label htmlFor="email" className="block text-white text-sm font-medium mb-2">
+                                        Correo electrónico
+                                    </label>
+                                    <input
+                                        ref={emailRef}
+                                        type="email"
+                                        placeholder="tu@email.com"
+                                        className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300"
+                                        id="email"
+                                        name="email"
+                                        value={email}
+                                        onChange={onInputChange}
+                                        required
+                                    />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="celular" className="block text-white text-sm font-medium mb-2">
+                                        WhatsApp / Teléfono
+                                    </label>
+                                    <input
+                                        ref={celularRef}
+                                        type="tel"
+                                        placeholder="6691234567"
+                                        className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 focus:outline-none transition-all duration-300"
+                                        id="celular"
+                                        name="celular"
+                                        value={celular}
+                                        onChange={onInputChange}
+                                        onKeyDown={e => onCelularChange(e)}
+                                        onPaste={e => onPasteCelular(e)}
+                                        maxLength="12"
+                                        required
+                                    />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="servicio" className="block text-white text-sm font-medium mb-2">
+                                        Tipo de servicio
+                                    </label>
+                                    <select
+                                        id="servicio"
+                                        name="servicio"
+                                        className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 focus:outline-none transition-all duration-300"
+                                        value={!servicio ? '0' : servicio}
+                                        onChange={onInputChange}
+                                        required
+                                    >
+                                        <option value="0" disabled className="text-gray-900 bg-white">
+                                            Selecciona un servicio
+                                        </option>
+                                        {
+                                            ServiciosInfo.map(servicio => (
+                                                <option key={servicio.id} value={servicio.id} className="text-gray-900 bg-white">
+                                                    {servicio.titulo}
+                                                </option>
+                                            ))
+                                        }
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label htmlFor="comentarios" className="block text-white text-sm font-medium mb-2">
+                                        Cuéntanos sobre tu proyecto
+                                    </label>
+                                    <textarea
+                                        name="comentarios"
+                                        id="comentarios"
+                                        value={comentarios}
+                                        onChange={onInputChange}
+                                        rows="4"
+                                        placeholder="Describe brevemente qué necesitas..."
+                                        className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-300 resize-none"
+                                        required
+                                    />
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:scale-[1.02]"
+                                >
+                                    Enviar mensaje
+                                </button>
+
+                                {/* Alertas */}
+                                {alertVisible && (
+                                    <Alerta mensaje="¡Mensaje enviado! Te contactaremos pronto" tipo="success" />
+                                )}
+                                {error && (
+                                    <Alerta mensaje={mensaje} tipo="error" />
+                                )}
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     )

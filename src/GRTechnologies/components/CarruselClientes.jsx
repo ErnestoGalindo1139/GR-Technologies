@@ -4,6 +4,7 @@ import {
     Pagination,
     Mousewheel,
     Keyboard,
+    Autoplay
 } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,6 +16,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import { useEffect, useState } from "react";
+import { casosExito } from "../../data";
 
 export const CarruselClientes = () => {
 
@@ -46,21 +48,12 @@ export const CarruselClientes = () => {
 
     return (
         <div className="color5 pb-[2rem]">
-
-            <div
-                className="md:container mx-2 py-16 md:mx-auto"
-                id="clientes"
-            >
-                <h3
-                    className="text-white font-bold md:mb-4 text-center text-4xl md:text-5xl pb-8"
-                >
-                    Nuestros Casos de&nbsp;
-                    <span
-                        className="text-blue-600"
-                    >
-                        Éxito
-                    </span>
+            <div className="md:container mx-2 py-16 md:mx-auto" id="clientes">
+                <h3 className="text-white font-bold md:mb-4 text-center text-4xl md:text-5xl pb-12">
+                    Casos de éxito&nbsp;
+                    <span className="text-blue-600">reales</span>
                 </h3>
+                
                 <Swiper
                     slidesPerView={slidesPerView}
                     spaceBetween={30}
@@ -69,106 +62,79 @@ export const CarruselClientes = () => {
                     mousewheel={true}
                     keyboard={true}
                     pagination={true}
-                    modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    }}
+                    modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
                     className="mySwiper"
-                    >
-                    <SwiperSlide>
-                        <div className="relative h-[40rem]">
-                            <img
-                                className=" rounded-lg object-cover absolute w-full h-full  opacity-100  transition-opacity duration-300 object-left-top"
-                                src="https://res.cloudinary.com/dfszyib7k/image/upload/v1709000024/grs-pagina-web/Clientes/mzi7uejbblnclr8rxidm.png"
-                                alt=""
-                            />
-                            <a target="_blank" rel="noreferrer" href="https://bhouse.grstechs.com">
-                                <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
-                                    {/* <a target="_blank" rel="noreferrer" href="https://bhouse.grstechs.com"> */}
-                                        <h1 className="absolute bottom-1 m-7 border p-1">BHouse</h1>
-                                    {/* </a> */}
-                                    {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
-                                    Da click para visualizar
-                                    </p> */}
+                >
+                    {casosExito.map((caso) => (
+                        <SwiperSlide key={caso.id}>
+                            <div className="bg-[#1a1d2e] border border-white/10 rounded-2xl overflow-hidden h-[550px] flex flex-col hover:border-white/30 transition-all duration-300">
+                                {/* Imagen */}
+                                <div className="relative h-64 overflow-hidden bg-gray-900">
+                                    <img
+                                        className="w-full h-full object-cover object-top"
+                                        src={caso.imagen}
+                                        alt={caso.nombre}
+                                        onError={(e) => {
+                                            e.target.style.objectFit = 'contain';
+                                            e.target.style.padding = '20px';
+                                        }}
+                                    />
+                                    {caso.url && (
+                                        <a 
+                                            href={caso.url} 
+                                            target="_blank" 
+                                            rel="noreferrer"
+                                            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6"
+                                        >
+                                            <span className="text-white font-semibold text-lg bg-blue-600 px-6 py-2 rounded-full">
+                                                Ver sitio →
+                                            </span>
+                                        </a>
+                                    )}
                                 </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="relative h-[40rem]">
-                            <img
-                            className=" rounded-lg object-cover absolute w-full h-full  opacity-100  transition-opacity duration-300"
-                            src="https://res.cloudinary.com/dfszyib7k/image/upload/v1723920668/grs-pagina-web/Clientes/309432463_181837011071798_312821987778392147_n_w1f3zm.jpg"
-                            alt=""
-                            />
-                            <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
-                                <a target="_blank" rel="noreferrer" href="">
-                                    <h1 className=" absolute bottom-1 m-7">Puerta del Cielo</h1>
-                                </a>
-                            {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
-                                Da click para visualizar
-                            </p> */}
+                                
+                                {/* Contenido */}
+                                <div className="p-6 flex-1 flex flex-col">
+                                    <h4 className="text-white text-2xl font-bold mb-2">{caso.nombre}</h4>
+                                    <p className="text-blue-400 text-sm font-medium mb-4">{caso.tipo}</p>
+                                    
+                                    {/* Tecnologías */}
+                                    <div className="mb-4">
+                                        <p className="text-gray-400 text-xs uppercase tracking-wide mb-2">Tecnologías</p>
+                                        <div className="flex flex-wrap gap-2">
+                                            {caso.tecnologias.map((tech, index) => (
+                                                <span 
+                                                    key={index}
+                                                    className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-300 text-xs font-medium"
+                                                >
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Características */}
+                                    <div className="flex-1">
+                                        <p className="text-gray-400 text-xs uppercase tracking-wide mb-2">Características</p>
+                                        <ul className="space-y-1.5">
+                                            {caso.caracteristicas.map((caracteristica, index) => (
+                                                <li key={index} className="flex items-center gap-2 text-gray-300 text-sm">
+                                                    <span className="text-green-400 text-xs">✓</span>
+                                                    {caracteristica}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="relative h-[40rem]">
-                            <img
-                                className=" rounded-lg object-cover absolute w-full h-full  opacity-100  transition-opacity duration-300 border border-gray-900"
-                                src="https://res.cloudinary.com/dfszyib7k/image/upload/v1723921620/grs-pagina-web/Clientes/CR-Comercial_eyphuu.png"
-                                alt=""
-                            />
-                            <a target="_blank" rel="noreferrer" href="https://www.cr-comercial.com">
-                                <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
-                                    {/* <a target="_blank" rel="noreferrer" href="https://www.cr-comercial.com"> */}
-                                        <h1 className="absolute bottom-1 m-7">CR Comercial</h1>
-                                    {/* </a> */}
-                                    {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
-                                    Da click para visualizar
-                                    </p> */}
-                                </div>
-                            </a>
-
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="relative h-[40rem]">
-                            <img
-                                className=" rounded-lg object-cover absolute w-full h-full  opacity-100  transition-opacity duration-300 border border-gray-900"
-                                src="https://res.cloudinary.com/dfszyib7k/image/upload/v1708999726/grs-pagina-web/Clientes/m1xma5cpy2bg8ncmqsuw.png"
-                                alt=""
-                            />
-                            <a target="_blank" rel="noreferrer" href="https://misso-sushi.grstechs.com">
-                                <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
-                                    {/* <a target="_blank" rel="noreferrer" href="https://misso-sushi.grstechs.com"> */}
-                                        <h1 className="absolute bottom-1 m-7">Misso sushi</h1>
-                                    {/* </a> */}
-                                    {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
-                                    Da click para visualizar
-                                    </p> */}
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="relative h-[40rem]">
-                            <img
-                                className=" rounded-lg object-contain absolute w-full h-full  opacity-100  transition-opacity duration-300 border border-gray-900"
-                                src="https://cdn.pixabay.com/photo/2022/04/14/04/45/vintage-aesthetic-7131604_640.jpg"
-                                alt=""
-                            />
-                            <a target="_blank" rel="noreferrer" href="https://bocadodivino.grstechs.com">
-                                <div className="rounded-lg  absolute w-full h-full bg-[#00000067] opacity-0 hover:opacity-100 transition-opacity duration-300 text-white font-bold text-4xl">
-                                    {/* <a target="_blank" rel="noreferrer" href="https://misso-sushi.grstechs.com"> */}
-                                        <h1 className="absolute bottom-1 m-7">Bocado Divino</h1>
-                                    {/* </a> */}
-                                    {/* <p className="text-sm font-thin text-gray-500 absolute bottom-1 ml-7 mb-3">
-                                    Da click para visualizar
-                                    </p> */}
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
         </div>
-
     );
 };

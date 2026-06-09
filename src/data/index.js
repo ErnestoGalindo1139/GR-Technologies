@@ -5,3 +5,6 @@ export * from './secciones';
 export * from './tecnologias';
 export * from './clientes';
 export * from './proyectos';
+export * from './soluciones';
+export * from './procesoTrabajo';
+export * from './casosExito';
